@@ -1,16 +1,15 @@
 import Image from "next/image";
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import CloseFillIcon from "remixicon-react/CloseFillIcon";
 import Menu3FillIcon from "remixicon-react/Menu3FillIcon";
 import AOS from "aos";
 import { useRouter } from "next/navigation";
+import { useMenuContext } from "@/context/MenuContext";
 
-interface HeaderPropsType {
-    isMenuOpen: boolean;
-    setIsMenuOpen: (arg0: boolean) => void;
-}
+export default function Header() {
 
-export default function Header( {isMenuOpen, setIsMenuOpen} :HeaderPropsType ) {
+  const {isMenuOpen, setMenuValue} = useMenuContext();
+
     useEffect(() => {
         AOS.init({
           duration: 800,
@@ -69,7 +68,7 @@ export default function Header( {isMenuOpen, setIsMenuOpen} :HeaderPropsType ) {
           <div
             className={`bg-red nav-bar-clip pl-6 pr-4 flex justify-center items-center md:hidden z-20`}
             data-aos="slide-left"
-            onClick={() => {setIsMenuOpen(!isMenuOpen); console.log(isMenuOpen)}}
+            onClick={() => {setMenuValue(!isMenuOpen); console.log(isMenuOpen)}}
           >
             {isMenuOpen ? (
               <CloseFillIcon size={30} className="text-white" />
@@ -82,7 +81,7 @@ export default function Header( {isMenuOpen, setIsMenuOpen} :HeaderPropsType ) {
           className={`${
             isMenuOpen ? "flex" : "hidden"
           } fixed top-0 w-screen h-full px-10 justify-center items-center z-10 bg-black/20 backdrop-blur-sm md:hidden`}
-          onClick={() => setIsMenuOpen(false)}
+          onClick={() => setMenuValue(false)}
         >
           <div className="bg-red flex flex-col justify-center items-center phone-menu-clip gap-10 p-12 z-20" data-aos="fade-right">
             <button className="px-8 hover:text-black hover:scale-105" onClick={()=> router.push("/")}>

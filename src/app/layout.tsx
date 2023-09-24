@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Aldrich } from "next/font/google";
 const aldrich = Aldrich({ weight: '400',subsets: ["latin"] });
 import 'aos/dist/aos.css';
+import MenuContextProvider from "@/context/MenuContextProvider";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,7 +19,7 @@ export default function RootLayout({
   
   return (
     <html lang="en" className="!scroll-smooth">
-      <body className={aldrich.className}>{children}</body>
+      <body className={aldrich.className}><MenuContextProvider>{children}</MenuContextProvider></body>
     </html>
   );
 }

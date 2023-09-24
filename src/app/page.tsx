@@ -23,7 +23,7 @@ export default function Home() {
 
   return (
     <div className="overflow-x-hidden">
-      <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+      <Header />
       {/* First section */}
       <section className="w-full md:h-screen overflow-x-hidden">
         {/* Hero srction */}

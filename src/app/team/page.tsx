@@ -13,7 +13,7 @@ interface TeamData {
 export default function Team() {
   return (
     <div className=" overflow-x-hidden ">
-      <Header isMenuOpen={false} setIsMenuOpen={() => {}} />
+      <Header />
       <section className="mx-28 mt-20">
         <h1 className="mb-10 text-4xl text-center md:text-left w-full  whitespace-nowrap">Our Team</h1>
         <div>

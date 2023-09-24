@@ -24,7 +24,7 @@ export default function Alumni() {
   console.log(alumniData);
   return (
     <div className=" overflow-x-hidden ">
-      <Header isMenuOpen={false} setIsMenuOpen={() => {}} />
+      <Header  />
       <section className="md:mx-28 mt-20">
         <h1 className="mb-10 text-4xl text-center md:text-left">Alumni</h1>
         <div>

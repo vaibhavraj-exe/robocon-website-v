@@ -32,18 +32,22 @@ export default function Footer(){
               <FacebookBoxFillIcon
                 size={50}
                 className="hover:fill-red hover:cursor-pointer"
+                href="https://www.facebook.com/roboconindia/"
               />
               <LinkedinBoxFillIcon
                 size={50}
                 className="hover:fill-red hover:cursor-pointer"
+                href="https://in.linkedin.com/company/srmteamrobocon/"
               />
               <InstagramFillIcon
                 size={50}
                 className="hover:fill-red hover:cursor-pointer"
+                href="https://www.instagram.com/srmteamrobocon/"
               />
               <YoutubeFillIcon
                 size={50}
                 className="hover:fill-red hover:cursor-pointer"
+                href="https://www.youtube.com/channel/UCDPES1-ulIEMp-mEpOsdaoA/"
               />
             </div>
           </div>

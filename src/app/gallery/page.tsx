@@ -22,10 +22,10 @@ export default function Gallery() {
   
   return (
     <div>
-      <Header isMenuOpen={false} setIsMenuOpen={() => {}} />
+      <Header />
       <section className="m-10 md:mx-28 md:my-20">
         <h1 className="text-4xl mb-12">Gallery</h1>
-        <ResponsiveMasonry columnsCountBreakPoints={{ 400: 1, 500: 2, 900: 3, 1200: 4 }} className="mx-10">
+        <ResponsiveMasonry columnsCountBreakPoints={{ 400: 1, 500: 2, 900: 3, 1200: 4 }} className="md:mx-10">
           <Masonry gutter="7px">
             {photoNames.map((image, i) => (
               <Image
