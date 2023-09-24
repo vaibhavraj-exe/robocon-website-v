@@ -18,6 +18,13 @@ export default function Header( {isMenuOpen, setIsMenuOpen} :HeaderPropsType ) {
         });
       }, []);
 
+      const scrollToBottom = () => {
+        window.scrollTo({
+          top: document.documentElement.scrollHeight,
+          behavior: "smooth",
+        });
+      };
+
       const router = useRouter();
     return (
         <div>
@@ -35,7 +42,7 @@ export default function Header( {isMenuOpen, setIsMenuOpen} :HeaderPropsType ) {
 
           {/* Desktop NavBar */}
           <div
-            className="hidden md:flex items-center bg-white text-[#3B3B3B] nav-bar-clip"
+            className="hidden md:flex items-center bg-white text-[#3B3B3B] nav-bar-clip font-bold"
             data-aos="slide-left"
           >
             <button className="ml-16 px-5 hover:text-red hover:scale-105" onClick={()=> router.push("/")}>
@@ -50,7 +57,10 @@ export default function Header( {isMenuOpen, setIsMenuOpen} :HeaderPropsType ) {
             <button className="px-5 hover:text-red hover:scale-105" onClick={()=> router.push("/gallery")}>
               Gallery
             </button>
-            <button className="px-5 hover:text-red hover:scale-105">
+            <button className="px-5 hover:text-red hover:scale-105" onClick={()=> router.push("/alumni")}>
+              Alumni
+            </button>
+            <button className="px-5 hover:text-red hover:scale-105" onClick={scrollToBottom}>
               Contact Us
             </button>
           </div>
@@ -87,7 +97,10 @@ export default function Header( {isMenuOpen, setIsMenuOpen} :HeaderPropsType ) {
             <button className="px-8 hover:text-black hover:scale-105" onClick={()=> router.push("/gallery")}>
               Gallery
             </button>
-            <button className="px-8 hover:text-black hover:scale-105">
+            <button className="px-8 hover:text-black hover:scale-105" onClick={()=> router.push("/alumni")}>
+              Alumni
+            </button>
+            <button className="px-8 hover:text-black hover:scale-105" onClick={scrollToBottom}>
               Contact Us
             </button>
           </div>

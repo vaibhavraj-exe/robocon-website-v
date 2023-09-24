@@ -6,7 +6,7 @@ import YoutubeFillIcon from "remixicon-react/YoutubeFillIcon"
 
 export default function Footer(){
     return (
-        <section className="py-5">
+        <section className="py-5 my-10">
         <img src="/footerDivider.svg" className="w-full mb-10" />
         <div className="flex justify-around flex-wrap">
           <div className="mt-10 flex flex-col gap-5">

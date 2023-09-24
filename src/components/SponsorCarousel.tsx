@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import sponsors from "@/../public/sponsors/sponsors.js";
+import sponsors from "@/../public/sponsors/sponsorsData.js";
 import Image from "next/image";
 import useIsDesktop, { useEffect, useRef, useState } from "react";
 

@@ -1,4 +1,4 @@
-const data = {
+{
     "LEADS": [
       {
         "Name": "Nikit Mathur",
@@ -289,6 +289,3 @@ const data = {
       }
     ]
   }
-
-  const dataList = Object.values(data).reduce((acc, group) => acc.concat(group), []);
-  export default data;

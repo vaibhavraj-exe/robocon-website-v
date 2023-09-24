@@ -2,15 +2,14 @@
 
 import CountUpUnit from "@/components/CountUpUnit";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
-import AOS from "aos";
+import React, { useState } from "react";
 import Link from "next/link";
 import SponsorCarousel from "@/components/SponsorCarousel";
 import {
-  noOfTeamAlumni,
+  noOfAlumni,
   noOfTeamMembers,
-  noOfTeamParticipations,
-  noOfTeamRobots,
+  noOfParticipations,
+  noOfRobots,
 } from "@/constants/constants";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -50,8 +49,8 @@ export default function Home() {
             data-aos-delay="400"
             data-aos-anchor-placement="top-bottom"
           >
-            <div className="text-5xl text-red">Robotics</div>
-            <div className="pl-10 text-5xl">Reimagined</div>
+            <div className="text-5xl text-red font-bold">Robotics</div>
+            <div className="pl-10 text-5xl font-bold">Reimagined</div>
             <div className="text-xl md:pr-20 pt-5 border-t-2 border-red">
               We are the official team of SRM participating in{" "}
               <Link
@@ -60,7 +59,7 @@ export default function Home() {
               >
                 ABU Robocon
               </Link>{" "}
-              <br /> since the year 2011.{" "}
+              <br /> since the year 2011, and much More.{" "}
             </div>
           </div>
         </div>
@@ -80,9 +79,9 @@ export default function Home() {
         <div className="flex flex-col items-center" data-aos="fade-up">
           <div className="flex flex-wrap gap-5 md:gap-0 w-full justify-center">
             <CountUpUnit upto={noOfTeamMembers} label="Team Members" />
-            <CountUpUnit upto={noOfTeamRobots} label="Robots" />
-            <CountUpUnit upto={noOfTeamParticipations} label="Participations" />
-            <CountUpUnit upto={noOfTeamAlumni} label="Alumni" />
+            <CountUpUnit upto={noOfRobots} label="Robots" />
+            <CountUpUnit upto={noOfParticipations} label="Participations" />
+            <CountUpUnit upto={noOfAlumni} label="Alumni" />
           </div>
           <div className="text-3xl m-12 text-center">
             GROWING <span className="text-red">STRONGER</span> BY THE SECOND
@@ -95,7 +94,7 @@ export default function Home() {
               data-aos="slide-right"
               data-aos-delay="100"
             >
-              <div className="text-3xl mb-5">Our Mission</div>
+              <div className="text-3xl mb-5 font-bold">Our Mission</div>
               <p className="text-xl w-full">
                 Reimagine the knowledge from robotics into producing a solution
                 for the growing society, for a better tomorrow.
@@ -108,7 +107,7 @@ export default function Home() {
               data-aos="slide-right"
               data-aos-delay="200"
             >
-              <div className="text-3xl mb-5">Our Vision</div>
+              <div className="text-3xl mb-5 font-bold">Our Vision</div>
               <div className="text-xl w-full">
                 Emerge as a renowned robotics systems lab centred at SRM IST,
                 INDIA by inculcating a collaborative work culture.

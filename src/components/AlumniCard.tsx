@@ -1,0 +1,82 @@
+import { useEffect } from "react";
+import AOS from "aos";
+import Image from "next/image";
+import FacebookBoxFillIcon from "remixicon-react/FacebookBoxFillIcon";
+import InstagramFillIcon from "remixicon-react/InstagramFillIcon";
+import LinkedinBoxFillIcon from "remixicon-react/LinkedinBoxFillIcon";
+
+interface AlumniCardPropsType {
+  Name: string;
+  Domain: string;
+  Designation: string;
+  About: string;
+  Facebook?: string;
+  Linkedin?: string;
+  Instagram?: string;
+  Description: string;
+  Profession: string;
+}
+
+export default function AlumniCard({
+  Name,
+  Domain,
+  Designation,
+  About,
+  Facebook,
+  Linkedin,
+  Instagram,
+  Description,
+  Profession,
+}: AlumniCardPropsType) {
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: false,
+    });
+  }, []);
+
+  return (
+    <article data-aos="flip-right" data-aos-anchor-placement="top-bottom">
+      <div className="group w-[300px] h-[300px] [perspective:1000px] overflow-hidden">
+        <div className="relative h-full w-full shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-focus:[transform:rotateY(180deg)] group-hover:[transform:rotateY(180deg)]">
+          <div className="absolute inset-0 bg-slate-100 flex">
+            <Image
+              src={`/alumni/photos/${Name}.jpg`}
+              alt="Project data image"
+              width={500}
+              height={500}
+              className="w-auto h-full"
+              unoptimized
+            ></Image>
+            <h1 className="text-xl absolute bottom-2 z-10 w-full bg-black/50 text-white group-hover:hidden text-center">
+              {Name} <br /> <p className="text-lg">Ex- {Domain} {Designation}</p>{" "}
+            </h1>
+          </div>
+          <div className="absolute inset-0 h-full w-full bg-red/80 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden] flex flex-col items-center justify-center gap-3 py-5 px-3">
+            <div>{About}</div>
+            <div className="flex gap-5 m-4">
+              {Facebook ? <FacebookBoxFillIcon
+                size={50}
+                className="hover:fill-white hover:scale-105 hover:cursor-pointer"
+                href={Facebook}
+              /> : null}
+              {Linkedin ? <LinkedinBoxFillIcon
+                size={50}
+                className="hover:fill-white hover:scale-105 hover:cursor-pointer"
+                href={Linkedin}
+              /> : null}
+              {Instagram ? <InstagramFillIcon
+                size={50}
+                className="hover:fill-white hover:scale-105 hover:cursor-pointer"
+                href={Instagram}
+              /> : null}
+            </div>
+            <div>
+              <button className="text-black font-bold">More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  );
+}
