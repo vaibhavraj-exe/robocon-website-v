@@ -42,7 +42,7 @@ export default function Header( {isMenuOpen, setIsMenuOpen} :HeaderPropsType ) {
 
           {/* Desktop NavBar */}
           <div
-            className="hidden md:flex items-center bg-white text-[#3B3B3B] nav-bar-clip font-bold"
+            className="hidden md:flex items-center bg-white text-[#3B3B3B] nav-bar-clip font-semibold"
             data-aos="slide-left"
           >
             <button className="ml-16 px-5 hover:text-red hover:scale-105" onClick={()=> router.push("/")}>

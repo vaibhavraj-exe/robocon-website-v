@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import AOS from "aos";
 import Image from "next/image";
 import FacebookBoxFillIcon from "remixicon-react/FacebookBoxFillIcon";
@@ -28,6 +28,8 @@ export default function AlumniCard({
   Description,
   Profession,
 }: AlumniCardPropsType) {
+  const [slideNo, setSlideNo] = useState(0);
+
   useEffect(() => {
     AOS.init({
       duration: 800,
@@ -49,30 +51,66 @@ export default function AlumniCard({
               unoptimized
             ></Image>
             <h1 className="text-xl absolute bottom-2 z-10 w-full bg-black/50 text-white group-hover:hidden text-center">
-              {Name} <br /> <p className="text-lg">Ex- {Domain} {Designation}</p>{" "}
+              {Name} <br />{" "}
+              <p className="text-lg">
+                Ex- {Domain} {Designation}
+              </p>{" "}
             </h1>
           </div>
-          <div className="absolute inset-0 h-full w-full bg-red/80 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden] flex flex-col items-center justify-center gap-3 py-5 px-3">
-            <div>{About}</div>
-            <div className="flex gap-5 m-4">
-              {Facebook ? <FacebookBoxFillIcon
-                size={50}
-                className="hover:fill-white hover:scale-105 hover:cursor-pointer"
-                href={Facebook}
-              /> : null}
-              {Linkedin ? <LinkedinBoxFillIcon
-                size={50}
-                className="hover:fill-white hover:scale-105 hover:cursor-pointer"
-                href={Linkedin}
-              /> : null}
-              {Instagram ? <InstagramFillIcon
-                size={50}
-                className="hover:fill-white hover:scale-105 hover:cursor-pointer"
-                href={Instagram}
-              /> : null}
-            </div>
+          <div className="absolute overflow-y-scroll inset-0 h-full w-full bg-red/80 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden] flex flex-col items-center justify-center gap-3 py-5 px-3">
+            {slideNo == 0 ? (
+              <div className="flex flex-col justify-center items-center">
+                <div>{About}</div>
+                <div className="flex gap-5 m-4">
+                  {Facebook ? (
+                    <FacebookBoxFillIcon
+                      size={50}
+                      className="hover:fill-white hover:scale-105 hover:cursor-pointer"
+                      href={Facebook}
+                    />
+                  ) : null}
+                  {Linkedin ? (
+                    <LinkedinBoxFillIcon
+                      size={50}
+                      className="hover:fill-white hover:scale-105 hover:cursor-pointer"
+                      href={Linkedin}
+                    />
+                  ) : null}
+                  {Instagram ? (
+                    <InstagramFillIcon
+                      size={50}
+                      className="hover:fill-white hover:scale-105 hover:cursor-pointer"
+                      href={Instagram}
+                    />
+                  ) : null}
+                </div>
+              </div>
+            ) : slideNo == 1 ? (
+              <div className="my-5">{Description != "" ? Description : "SRMTEAMROBOCON!"}</div>
+            ) : (
+              <div>{Profession}</div>
+            )}
             <div>
-              <button className="text-black font-bold">More</button>
+              {slideNo != 0 ? (
+                <button
+                  className="text-slate-50 font-bold border-4 border-slate-50 w-28"
+                  onClick={() => {
+                    slideNo > 0 ? setSlideNo(slideNo - 1) : null;
+                  }}
+                >
+                  Previous
+                </button>
+              ) : null}
+              {slideNo != 2 ? (
+                <button
+                  className="text-slate-50 font-bold border-4 border-slate-50 w-28 ml-1"
+                  onClick={() => {
+                    slideNo < 2 ? setSlideNo(slideNo + 1) : null;
+                  }}
+                >
+                  Next
+                </button>
+              ) : null}
             </div>
           </div>
         </div>
