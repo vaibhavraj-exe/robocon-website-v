@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import sponsors from "@/../public/sponsors/sponsors.js";
 import Image from "next/image";
-import useIsDesktop, { useRef } from "react";
+import useIsDesktop, { useEffect, useRef, useState } from "react";
 
 // Import Swiper styles
 import "swiper/css";
@@ -10,10 +10,18 @@ import "swiper/css";
 import { Autoplay } from "swiper/modules";
 
 export default function SponsorCarousel() {
+  const [windowWidth, setWindowWidth] = useState(400);
+
+  let w = 0;
+  useEffect(() => {
+    setWindowWidth(window.innerWidth)
+    console.log(windowWidth / 300 <= 5 ? windowWidth / 300 : 5);
+  }, []);
+
   return (
     <div className="my-10 w-screen">
       <Swiper
-        slidesPerView={ (window.innerWidth / 300) <=5 ? (window.innerWidth / 300) : 5 }
+        slidesPerView={windowWidth / 300 <= 5 ? windowWidth / 300 : 5}
         spaceBetween={0}
         centeredSlides={true}
         autoplay={{
@@ -27,8 +35,16 @@ export default function SponsorCarousel() {
       >
         {sponsors.map((sponsor, key) => {
           return (
-            <SwiperSlide className=" bg-slate-50 w-44 sponsor-clip flex justify-center items-center py-5 pr-5 pl-20" key={key}>
-              <Image src={`/sponsors/${sponsor}`} alt={sponsor} height={150} width={150}></Image>
+            <SwiperSlide
+              className=" bg-slate-50 w-44 sponsor-clip flex justify-center items-center py-5 pr-5 pl-20"
+              key={key}
+            >
+              <Image
+                src={`/sponsors/${sponsor}`}
+                alt={sponsor}
+                height={150}
+                width={150}
+              ></Image>
             </SwiperSlide>
           );
         })}

@@ -62,7 +62,6 @@ export default function Gallery() {
                 src={`/gallery/${image}`}
                 loader={() => imgLoader(image)}
                 style={{ width: "100%", display: "block" }}
-                // placeholder="blur"
                 alt=""
                 width={300}
                 height={300}

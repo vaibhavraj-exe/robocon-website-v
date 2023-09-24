@@ -59,7 +59,7 @@ export default function Header( {isMenuOpen, setIsMenuOpen} :HeaderPropsType ) {
           <div
             className={`bg-red nav-bar-clip pl-6 pr-4 flex justify-center items-center md:hidden z-20`}
             data-aos="slide-left"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            onClick={() => {setIsMenuOpen(!isMenuOpen); console.log(isMenuOpen)}}
           >
             {isMenuOpen ? (
               <CloseFillIcon size={30} className="text-white" />
