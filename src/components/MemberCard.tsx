@@ -4,6 +4,7 @@ import Image from "next/image";
 import FacebookBoxFillIcon from "remixicon-react/FacebookBoxFillIcon";
 import InstagramFillIcon from "remixicon-react/InstagramFillIcon";
 import LinkedinBoxFillIcon from "remixicon-react/LinkedinBoxFillIcon";
+import Link from "next/link";
 
 export interface MemberCardPropsType {
   Name: string;
@@ -47,25 +48,28 @@ export default function MemberCard({
           <div className="absolute inset-0 h-full w-full bg-red/80 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden] flex flex-col items-center justify-center gap-3 py-5 px-3">
             <div className="flex gap-5 m-4">
               {Facebook ? (
-                <FacebookBoxFillIcon
-                  size={50}
-                  className="hover:fill-white hover:scale-105 hover:cursor-pointer"
-                  href={Facebook}
-                />
+                <Link href={Facebook}>
+                  <FacebookBoxFillIcon
+                    size={50}
+                    className="hover:fill-white hover:scale-105 hover:cursor-pointer"
+                  />
+                </Link>
               ) : null}
               {Linkedin ? (
+                <Link href={Linkedin}>
                 <LinkedinBoxFillIcon
                   size={50}
                   className="hover:fill-white hover:scale-105 hover:cursor-pointer"
-                  href={Linkedin}
                 />
+                </Link>
               ) : null}
               {Instagram ? (
+                <Link href={Instagram}>
                 <InstagramFillIcon
                   size={50}
                   className="hover:fill-white hover:scale-105 hover:cursor-pointer"
-                  href={Instagram}
                 />
+                </Link>
               ) : null}
             </div>
           </div>

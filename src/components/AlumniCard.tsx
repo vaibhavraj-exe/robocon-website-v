@@ -4,6 +4,7 @@ import Image from "next/image";
 import FacebookBoxFillIcon from "remixicon-react/FacebookBoxFillIcon";
 import InstagramFillIcon from "remixicon-react/InstagramFillIcon";
 import LinkedinBoxFillIcon from "remixicon-react/LinkedinBoxFillIcon";
+import Link from "next/link";
 
 interface AlumniCardPropsType {
   Name: string;
@@ -62,28 +63,31 @@ export default function AlumniCard({
               <div className="flex flex-col justify-center items-center">
                 <div>{About}</div>
                 <div className="flex gap-5 m-4">
-                  {Facebook ? (
-                    <FacebookBoxFillIcon
-                      size={50}
-                      className="hover:fill-white hover:scale-105 hover:cursor-pointer"
-                      href={Facebook}
-                    />
-                  ) : null}
-                  {Linkedin ? (
-                    <LinkedinBoxFillIcon
-                      size={50}
-                      className="hover:fill-white hover:scale-105 hover:cursor-pointer"
-                      href={Linkedin}
-                    />
-                  ) : null}
-                  {Instagram ? (
-                    <InstagramFillIcon
-                      size={50}
-                      className="hover:fill-white hover:scale-105 hover:cursor-pointer"
-                      href={Instagram}
-                    />
-                  ) : null}
-                </div>
+              {Facebook ? (
+                <Link href={Facebook}>
+                  <FacebookBoxFillIcon
+                    size={50}
+                    className="hover:fill-white hover:scale-105 hover:cursor-pointer"
+                  />
+                </Link>
+              ) : null}
+              {Linkedin ? (
+                <Link href={Linkedin}>
+                <LinkedinBoxFillIcon
+                  size={50}
+                  className="hover:fill-white hover:scale-105 hover:cursor-pointer"
+                />
+                </Link>
+              ) : null}
+              {Instagram ? (
+                <Link href={Instagram}>
+                <InstagramFillIcon
+                  size={50}
+                  className="hover:fill-white hover:scale-105 hover:cursor-pointer"
+                />
+                </Link>
+              ) : null}
+            </div>
               </div>
             ) : slideNo == 1 ? (
               <div className="my-5">{Description != "" ? Description : "SRMTEAMROBOCON!"}</div>
