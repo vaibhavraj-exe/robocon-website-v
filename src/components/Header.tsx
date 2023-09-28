@@ -5,6 +5,7 @@ import Menu3FillIcon from "remixicon-react/Menu3FillIcon";
 import AOS from "aos";
 import { useRouter } from "next/navigation";
 import { useMenuContext } from "@/context/MenuContext";
+import ParticlesCom from "./ParticlesCom";
 
 export default function Header() {
 
@@ -27,6 +28,9 @@ export default function Header() {
       const router = useRouter();
     return (
         <div>
+        <div>
+          <ParticlesCom />
+        </div>
             {/* Header section */}
         <div className="mt-12 md:mt-16 pl-10 md:pl-16 flex justify-between w-full">
           {/* Navbar Logo */}
@@ -35,7 +39,8 @@ export default function Header() {
             alt="logo"
             width={210}
             height={200}
-            className="w-44 md:w-52"
+            className="w-44 md:w-52 cursor-pointer"
+            onClick={()=> router.push("/")}
             unoptimized
           ></Image>
 
@@ -50,9 +55,9 @@ export default function Header() {
             <button className="px-5 hover:text-red hover:scale-105" onClick={()=> router.push("/team")}>
               Team
             </button>
-            <button className="px-5 hover:text-red hover:scale-105">
+            {/* <button className="px-5 hover:text-red hover:scale-105">
               Projects & Achievements
-            </button>
+            </button> */}
             <button className="px-5 hover:text-red hover:scale-105" onClick={()=> router.push("/gallery")}>
               Gallery
             </button>
@@ -90,9 +95,9 @@ export default function Header() {
             <button className="px-8 hover:text-black hover:scale-105" onClick={()=> router.push("/team")}>
               Team
             </button>
-            <button className="px-8 hover:text-black hover:scale-105">
+            {/* <button className="px-8 hover:text-black hover:scale-105">
               Projects & Achievements
-            </button>
+            </button> */}
             <button className="px-8 hover:text-black hover:scale-105" onClick={()=> router.push("/gallery")}>
               Gallery
             </button>
