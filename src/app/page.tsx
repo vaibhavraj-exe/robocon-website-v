@@ -50,8 +50,8 @@ export default function Home() {
             data-aos-anchor-placement="top-bottom"
           >
             <div className="text-5xl text-red font-bold">Robotics</div>
-            <div className="pl-10 text-5xl font-bold">Reimagined</div>
-            <div className="text-xl md:pr-20 pt-5 border-t-2 border-red">
+            <div className="pl-10 text-5xl font-bold text-white">Reimagined</div>
+            <div className="text-xl md:pr-20 pt-5 border-t-2 border-red text-white">
               We are the official team of SRM participating in{" "}
               <Link
                 href="https://aburobocon2024.vtv.gov.vn/"
@@ -83,14 +83,14 @@ export default function Home() {
             <CountUpUnit upto={noOfParticipations} label="Participations" />
             <CountUpUnit upto={noOfAlumni} label="Alumni" />
           </div>
-          <div className="text-3xl m-12 text-center">
+          <div className="text-3xl m-12 text-center text-white">
             GROWING <span className="text-red">STRONGER</span> BY THE SECOND
           </div>
         </div>
         <div className="flex md:justify-center justify-around flex-wrap lg:flex-nowrap gap-16 px-10 md:gap-44 mt-20 w-full">
           <div className="border-l-4 border-red overflow-hidden">
             <div
-              className="md:w-[500px] px-5 md:px-10 w-full"
+              className="md:w-[500px] px-5 md:px-10 w-full text-white"
               data-aos="slide-right"
               data-aos-delay="100"
             >
@@ -107,8 +107,8 @@ export default function Home() {
               data-aos="slide-right"
               data-aos-delay="200"
             >
-              <div className="text-3xl mb-5 font-bold">Our Vision</div>
-              <div className="text-xl w-full">
+              <div className="text-3xl mb-5 font-bold text-white">Our Vision</div>
+              <div className="text-xl w-full text-white">
                 Emerge as a renowned robotics systems lab centred at SRM IST,
                 INDIA by inculcating a collaborative work culture.
               </div>
@@ -119,7 +119,7 @@ export default function Home() {
 
       {/* Third section */}
       <section className="w-full h-full">
-        <div className="text-3xl md:text-4xl pl-10 md:pl-44 mt-44">
+        <div className="text-3xl md:text-4xl pl-10 md:pl-44 mt-44 text-white">
           Our Sponsors
         </div>
         <SponsorCarousel />

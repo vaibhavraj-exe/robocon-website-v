@@ -10,7 +10,7 @@ interface CountUpUnitPropsType {
 export default function CountUpUnit({upto, label}: CountUpUnitPropsType) {
 
   return (
-    <div className="flex items-center justify-center gap-10 flex-wrap">
+    <div className="flex items-center justify-center gap-10 flex-wrap text-white">
       <div className="flex flex-col justify-center items-center">
         <div className="text-4xl md:text-6xl flex items-center justify-center w-32 md:w-48">
           <div className="invisible">+</div>
