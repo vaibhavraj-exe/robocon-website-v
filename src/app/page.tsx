@@ -5,12 +5,13 @@ import Image from "next/image";
 import React, { useState } from "react";
 import Link from "next/link";
 import SponsorCarousel from "@/components/SponsorCarousel";
+import Project from "@/components/Project";
 import {
   noOfAlumni,
   noOfTeamMembers,
   noOfParticipations,
   noOfRobots,
-} from "@/constants/constants";
+} from "@/constants/constants";  
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -117,13 +118,24 @@ export default function Home() {
         </div>
       </section>
 
+
       {/* Third section */}
+      <section>
+      {
+        <Project/>
+      }
+      </section>
+
+
+      {/* Fourth section */}
       <section className="w-full h-full">
         <div className="text-3xl md:text-4xl pl-10 md:pl-44 mt-44 text-white">
           Our Sponsors
         </div>
         <SponsorCarousel />
       </section>
+
+      
 
       {/* Footer */}
       <Footer />
