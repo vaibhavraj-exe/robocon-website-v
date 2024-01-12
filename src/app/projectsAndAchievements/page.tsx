@@ -122,7 +122,7 @@ const page = () => {
           <div className="text-xl whitespace-nowrap md:text-4xl text-white mb-10">Our Achievements</div>
           <div className="flex flex-wrap gap-x-28 gap-y-7 md:gap-y-12 justify-center mb-20">
             {[1, 2, 3, 4, 5, 6].map((e, i) => (
-            <div className="flex items-center justify-center md:-1/3 h-24 md:h-44 border-r-2 border-red pr-2 md:pr-5" key={i}>
+            <div className="flex items-center justify-center md:w-1/3 h-24 md:h-44 border-r-2 border-red pr-2 md:pr-5" key={i}>
               <Image
                 src={`/projects/image8.png`}
                 alt="Project data image"
