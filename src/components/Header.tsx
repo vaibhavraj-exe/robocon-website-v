@@ -55,9 +55,9 @@ export default function Header() {
             <button className="px-5 hover:text-red hover:scale-105" onClick={()=> router.push("/team")}>
               Team
             </button>
-            {/* <button className="px-5 hover:text-red hover:scale-105">
+            <button className="px-5 hover:text-red hover:scale-105" onClick={()=> router.push("/projectsAndAchievements")}>
               Projects & Achievements
-            </button> */}
+            </button>
             <button className="px-5 hover:text-red hover:scale-105" onClick={()=> router.push("/gallery")}>
               Gallery
             </button>
@@ -95,9 +95,9 @@ export default function Header() {
             <button className="px-8 hover:text-black hover:scale-105" onClick={()=> router.push("/team")}>
               Team
             </button>
-            {/* <button className="px-8 hover:text-black hover:scale-105">
+            <button className="px-8 hover:text-black hover:scale-105" onClick={()=> router.push("/projectsAndAchievements")}>
               Projects & Achievements
-            </button> */}
+            </button>
             <button className="px-8 hover:text-black hover:scale-105" onClick={()=> router.push("/gallery")}>
               Gallery
             </button>
