@@ -88,7 +88,7 @@ export default function Header() {
           } fixed top-0 w-screen h-full px-10 justify-center items-center z-10 bg-black/20 backdrop-blur-sm md:hidden`}
           onClick={() => setMenuValue(false)}
         >
-          <div className="bg-red flex flex-col justify-center items-center phone-menu-clip gap-10 p-12 z-20" data-aos="fade-right">
+          <div className="bg-red text-white flex flex-col justify-center items-center phone-menu-clip gap-10 p-12 z-20" data-aos="fade-right">
             <button className="px-8 hover:text-black hover:scale-105" onClick={()=> router.push("/")}>
               Home
             </button>

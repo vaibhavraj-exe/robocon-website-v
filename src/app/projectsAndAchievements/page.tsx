@@ -1,14 +1,11 @@
 "use client";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import classes from "./projects.module.css";
-import resets from "./resets.module.css";
 import Image from "next/image";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 
 import "slick-carousel/slick/slick-theme.css";
-import { Autoplay } from "swiper/modules";
 
 const CustomNextArrow = (props: any) => (
   <div
@@ -61,12 +58,13 @@ const page = () => {
   return (
     <div>
       <Header />
+          <div className="text-xl whitespace-nowrap md:text-4xl text-white mb-10 ml-10 md:ml-40 mt-10">Our Projects</div>
       <div className="w-3/4 m-auto">
         <div className="mt-20">
           <Slider {...settings}>
             {data.map((d) => (
               <div
-                className="bg-black/0 h-[600px] w-[300px] relative"
+                className="bg-black/0 h-full w-[300px] relative mb-10"
                 key={d.name}
               >
                 <div className="flex justify-center items-center relative">
@@ -105,8 +103,9 @@ const page = () => {
 
                   <img src={d.img} alt="" className="h-96 w-96 z-1" />
                 </div>
-                <div className="text-gray-50 flex flex-col justify-center items-center gap-3 p-4 text-2xl">
-                  <p className="max-w-120 text-xl md:text-2xl text-center">
+                <div className="text-gray-50 flex flex-col justify-center items-center gap-3 p-4 text-2xl h-full">
+                  <p>{d.name}</p>
+                  <p className="max-w-120 text-sm md:text-base text-center h-full">
                     {d.about}
                   </p>
                 </div>
@@ -121,7 +120,7 @@ const page = () => {
         <div className=" mx-4 md:mx-40">
           <div className="text-xl whitespace-nowrap md:text-4xl text-white mb-10">Our Achievements</div>
           <div className="flex flex-wrap gap-x-28 gap-y-7 md:gap-y-12 justify-center mb-20">
-            {[1, 2, 3, 4, 5, 6].map((e, i) => (
+            {/* {[1, 2, 3, 4, 5, 6].map((e, i) => (
             <div className="flex items-center justify-center md:w-1/3 h-24 md:h-44 border-r-2 border-red pr-2 md:pr-5" key={i}>
               <Image
                 src={`/projects/image8.png`}
@@ -135,7 +134,85 @@ const page = () => {
                 Six teams from SRM Team Robocon participated in the Smart India
                 Hackathon, an initiative taken by the Government of India.
               </div>
-            </div>))}
+            </div>))} */}
+            <div className="flex items-center justify-center md:w-1/3 h-24 md:h-44 border-r-2 border-red pr-2 md:pr-5">
+              <Image
+                src={`/achievements/robo.jpg`}
+                alt="Project data image"
+                width={500}
+                height={500}
+                className="w-auto h-full"
+                unoptimized
+              ></Image>
+              <div className="text-white text-right text-sm md:text-base pl-1">
+              SRM Team Robocon finished 11th in DD Robocon 2023, out of 100+ teams that participated in the event.
+              </div>
+            </div>
+            <div className="flex items-center justify-center md:w-1/3 h-24 md:h-44 border-r-2 border-red pr-2 md:pr-5">
+              <Image
+                src={`/achievements/fusion.png`}
+                alt="Project data image"
+                width={500}
+                height={500}
+                className="w-auto h-full"
+                unoptimized
+              ></Image>
+              <div className="text-white text-right text-sm md:text-base pl-1">
+              Our team was awarded the Fusion 360 Best User Experience Award with a cash prize of Rs 10,000.
+              </div>
+            </div>
+            <div className="flex items-center justify-center md:w-1/3 h-24 md:h-44 border-r-2 border-red pr-2 md:pr-5">
+              <Image
+                src={`/achievements/SIH.png`}
+                alt="Project data image"
+                width={500}
+                height={500}
+                className="w-auto h-full"
+                unoptimized
+              ></Image>
+              <div className="text-white text-right text-sm md:text-base pl-1">
+              3 Teams from SRM Team Robocon led by members of the club qualified from the internal SIH 2023.
+              </div>
+            </div>
+            <div className="flex items-center justify-center md:w-1/3 h-24 md:h-44 border-r-2 border-red pr-2 md:pr-5">
+              <Image
+                src={`/achievements/SRM.png`}
+                alt="Project data image"
+                width={500}
+                height={500}
+                className="w-auto h-full"
+                unoptimized
+              ></Image>
+              <div className="text-white text-right text-sm md:text-base pl-1">
+              Our team secured the NewGen IEDC SRM Grant of rupees 1 lakh at the IDEX hackathon 2022.
+              </div>
+            </div>
+            <div className="flex items-center justify-center md:w-1/3 h-24 md:h-44 border-r-2 border-red pr-2 md:pr-5">
+              <Image
+                src={`/achievements/BITS.png`}
+                alt="Project data image"
+                width={500}
+                height={500}
+                className="w-auto h-full"
+                unoptimized
+              ></Image>
+              <div className="text-white text-right text-sm md:text-base pl-1">
+              We participated in the BITS Quark Line Follower Competition 2022 and secured the 1st position winning a cash prize of Rs 30000.
+              </div>
+            </div>
+            <div className="flex items-center justify-center md:w-1/3 h-24 md:h-44 border-r-2 border-red pr-2 md:pr-5">
+              <Image
+                src={`/achievements/robo.jpg`}
+                alt="Project data image"
+                width={500}
+                height={500}
+                className="w-auto h-full"
+                unoptimized
+              ></Image>
+              <div className="text-white text-right text-sm md:text-base pl-1">
+              Team Robocon’s Bot for the problem statement of 2014 was awarded the “Most Economical Bot” by DD Robocon. 
+              </div>
+            </div>
           </div>
           </div>
       <Footer />
@@ -145,19 +222,34 @@ const page = () => {
 
 const data = [
   {
-    name: `first`,
-    img: `/projects/fourth.png`,
-    about: `Reimagine the knowledge from robotics into producing a solution for the growing society, for a better tomorrow.`,
+    name: `PYRO`,
+    img: `/projects/pyro.png`,
+    about: `A self-sufficient four-wheel drive vehicle providing a cutting-edge solution for maintaining hygienic environments.`,
   },
   {
-    name: "second",
-    img: `/projects/fourth.png`,
-    about: `Reimagine the knowledge from robotics into producing a solution for the growing society, for a better tomorrow.`,
+    name: "IDEX",
+    img: `/projects/IDEX.png`,
+    about: `A next gen 3D printed helmet for welders addressing the common challenge of obscured visibility during welding`,
   },
   {
-    name: "third",
-    img: `/projects/fourth.png`,
-    about: `Reimagine the knowledge from robotics into producing a solution for the growing society, for a better tomorrow.`,
+    name: "SPIDER BOT",
+    img: `/projects/SPIDER.png`,
+    about: `A next gen 3D printed helmet for welders addressing the common challenge of obscured visibility during weldingPrimarily designed for search and rescue missions, the Spider Bot excels in navigating diverse terrains and reaching otherwise inaccessible areas.`,
+  },
+  {
+    name: "EVA",
+    img: `/projects/EVA.png`,
+    about: `Enhanced Visitor Assistant fuses the functions of a Visitor Assistant with an Autonomous Professor, presenting an intelligent humanoid robot, which makes use of automated control systems and cutting-edge AI technology.`,
+  },
+  {
+    name: "RFID",
+    img: `/projects/RFID.jpg`,
+    about: `The Two Factor Authentication RFID Security System is a security measure that uses RFID technology along with another authentication factor to provide a higher level of security.`,
+  },
+  {
+    name: "ROV",
+    img: `/projects/ROV.png`,
+    about: `The ROV is a remotely piloted underwater vehicle, equipped with advanced sensors and high-resolution cameras to revolutionise maintenance, safety, and environmental monitoring in hydroelectric projects.`,
   },
 ];
 

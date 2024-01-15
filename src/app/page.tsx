@@ -13,6 +13,7 @@ import {
 } from "@/constants/constants";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ProjectsDisplay from "@/components/ProjectsDisplay";
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,7 +26,7 @@ export default function Home() {
     <div className="overflow-x-hidden">
       <Header />
       {/* First section */}
-      <section className="w-full md:h-screen overflow-x-hidden">
+      <section className="w-full md:h-full overflow-x-hidden">
         {/* Hero srction */}
         <div className="flex items-center gap-10 md:gap-44 flex-col md:flex-row">
           <div>
@@ -75,7 +76,7 @@ export default function Home() {
       </section>
 
       {/* Second section */}
-      <section className="w-full h-full flex flex-col items-center mt-20 md:mt-0">
+      <section className="w-full h-full md:h-screen flex flex-col items-center justify-center mt-20 md:mt-0">
         <div className="flex flex-col items-center" data-aos="fade-up">
           <div className="flex flex-wrap gap-5 md:gap-0 w-full justify-center">
             <CountUpUnit upto={noOfTeamMembers} label="Team Members" />
@@ -115,6 +116,10 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </section>
+
+      <section>
+        <ProjectsDisplay />
       </section>
 
       {/* Third section */}

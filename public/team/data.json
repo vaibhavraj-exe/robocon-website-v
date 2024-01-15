@@ -1,6 +1,12 @@
 {
     "LEADS": [
       {
+        "Name": "Abuzer Ganjifrockwala",
+        "Designation": "Team Manager",
+        "Linkedin": "https://www.linkedin.com/in/abuzer-ganjifrockwala-9b5924226/",
+        "Instagram": "https://instagram.com/abuzer_g63?igshid=YmMyMTA2M2Y=/"
+      },
+      {
         "Name": "Nikit Mathur",
         "Designation": "Team Lead",
         "Facebook": "https://www.facebook.com/people/Nikit-Mathur/100082899335488/",
@@ -76,10 +82,6 @@
         "Instagram": "https://instagram.com/anshul_kawarey?igshid=OGQ5ZDc2ODk2ZA==/"
       },
       {
-        "Name": "Sakshi K",
-        "Designation": "Member"
-      },
-      {
         "Name": "Shohon Saha",
         "Designation": "Member",
         "Instagram": "https://instagram.com/earths_moon_?igshid=ZDdkNTZiNTM=/"
@@ -117,12 +119,6 @@
         "Instagram": "https://instagram.com/daaaaanu?igshid=MjEwN2IyYWYwYw==/"
       },
       {
-        "Name": "Divjot Singh Manchanda",
-        "Designation": "Member",
-        "Linkedin": "https://www.linkedin.com/in/divjot-singh-manchanda-910643251/",
-        "Instagram": "www.instagram.com/djsmanchanda/"
-      },
-      {
         "Name": "Krrish Verma",
         "Designation": "Member",
         "Linkedin": "https://www.linkedin.com/in/krrish-verma/",
@@ -139,12 +135,6 @@
         "Designation": "Member",
         "Linkedin": "https://www.linkedin.com/in/mohammed-sadriwala-30205b25b/",
         "Instagram": "https://instagram.com/sadriwala_mohammed?igshid=ZDdkNTZiNTM=/"
-      },
-      {
-        "Name": "Pracheta Mitra",
-        "Designation": "Member",
-        "Linkedin": "https://www.linkedin.com/in/pracheta-mitra-204409251/",
-        "Instagram": "https://instagram.com/prach_was_here?igshid=ZDdkNTZiNTM=/"
       },
       {
         "Name": "Sanjeevini Mekin",
@@ -187,12 +177,6 @@
     ],
     "MCSOCD": [
       {
-        "Name": "Abuzer Ganjifrockwala",
-        "Designation": "Member",
-        "Linkedin": "https://www.linkedin.com/in/abuzer-ganjifrockwala-9b5924226/",
-        "Instagram": "https://instagram.com/abuzer_g63?igshid=YmMyMTA2M2Y=/"
-      },
-      {
         "Name": "Swetanshu Agrawal",
         "Designation": "Member",
         "Linkedin": "https://www.linkedin.com/in/swetanshu-agrawal/",
@@ -233,6 +217,10 @@
         "Designation": "Member",
         "Linkedin": "https://www.linkedin.com/in/vaibhavraj-exe/",
         "Instagram": "https://instagram.com/vaibhavraj.exe?igshid=ZDdkNTZiNTM=/"
+      },
+      {
+        "Name": "Sakshi K",
+        "Designation": "Member"
       }
     ],
     "MENTORS": [
