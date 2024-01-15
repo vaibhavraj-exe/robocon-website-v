@@ -1,17 +1,17 @@
 {
     "LEADS": [
       {
-        "Name": "Abuzer Ganjifrockwala",
-        "Designation": "Team Manager",
-        "Linkedin": "https://www.linkedin.com/in/abuzer-ganjifrockwala-9b5924226/",
-        "Instagram": "https://instagram.com/abuzer_g63?igshid=YmMyMTA2M2Y=/"
-      },
-      {
         "Name": "Nikit Mathur",
         "Designation": "Team Lead",
         "Facebook": "https://www.facebook.com/people/Nikit-Mathur/100082899335488/",
         "Linkedin": "https://www.linkedin.com/in/nikit-mathur-270033231/",
         "Instagram": "https://www.instagram.com/_nikitmathur_/"
+      },
+      {
+        "Name": "Abuzer Ganjifrockwala",
+        "Designation": "Team Manager",
+        "Linkedin": "https://www.linkedin.com/in/abuzer-ganjifrockwala-9b5924226/",
+        "Instagram": "https://instagram.com/abuzer_g63?igshid=YmMyMTA2M2Y=/"
       },
       {
         "Name": "Aarush Bhandari ",
@@ -95,22 +95,10 @@
     ],
     "SIESED": [
       {
-        "Name": "Deepak Sharda",
-        "Designation": "Member",
-        "Linkedin": "https://www.linkedin.com/in/deepak-sharda/",
-        "Instagram": "https://instagram.com/deepak_sharda_?igshid=ZDdkNTZiNTM=/"
-      },
-      {
         "Name": "Smeet Bathani",
         "Designation": "Member",
         "Linkedin": "https://in.linkedin.com/in/smeet-bathani-2937b2226/",
         "Instagram": "https://www.instagram.com/_the_smeet_/"
-      },
-      {
-        "Name": "Maheshwar M R",
-        "Designation": "Member",
-        "Linkedin": "https://www.linkedin.com/in/m-r-maheshwar-472305221/",
-        "Instagram": "https://instagram.com/ateluguboy?igshid=YmMyMTA2M2Y=/"
       },
       {
         "Name": "Daniel Biju",

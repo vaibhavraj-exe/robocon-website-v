@@ -78,6 +78,7 @@ const particlesLoaded = useCallback(async (container: Container | undefined) => 
                     area: 800,
                 },
                 value: 15,
+                limit: 50
             },
             opacity: {
                 value: 0.5,

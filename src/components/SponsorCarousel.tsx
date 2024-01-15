@@ -36,7 +36,7 @@ export default function SponsorCarousel() {
         {sponsors.map((sponsor, key) => {
           return (
             <SwiperSlide
-              className=" bg-slate-50 w-44 sponsor-clip flex justify-center items-center py-5 pr-5 pl-20"
+              className=" bg-white w-44 sponsor-clip flex justify-center items-center py-5 pr-5 pl-20"
               key={key}
             >
               <Image

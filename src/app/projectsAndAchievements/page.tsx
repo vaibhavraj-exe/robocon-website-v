@@ -242,7 +242,7 @@ const data = [
     about: `Enhanced Visitor Assistant fuses the functions of a Visitor Assistant with an Autonomous Professor, presenting an intelligent humanoid robot, which makes use of automated control systems and cutting-edge AI technology.`,
   },
   {
-    name: "RFID",
+    name: "Two Factor RFID Authentication Device",
     img: `/projects/RFID.jpg`,
     about: `The Two Factor Authentication RFID Security System is a security measure that uses RFID technology along with another authentication factor to provide a higher level of security.`,
   },

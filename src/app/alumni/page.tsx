@@ -26,7 +26,7 @@ export default function Alumni() {
     <div className=" overflow-x-hidden ">
       <Header  />
       <section className="md:mx-28 mt-20">
-        <h1 className="mb-10 text-4xl text-center md:text-left">Alumni</h1>
+        <h1 className="mb-10 text-4xl text-center md:text-left text-white">Alumni</h1>
         <div>
           {Object.keys(alumniData).map((key) => (
             <div key={key} className="text-gray-50 mb-20">
