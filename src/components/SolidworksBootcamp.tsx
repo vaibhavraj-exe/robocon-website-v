@@ -48,7 +48,7 @@ export default function SolidworksBootcamp() {
             <h1 className="text-3xl font-semibold text-blue-900 mb-2">Solidworks Bootcamp 2.0</h1>
             <p className="text-black mb-8 font-bold">Three-day Workshop<br className={"md:hidden"}/> on CAD Modelling
             </p>
-            <a href="https://docs.google.com/forms/d/1zIynSahCUS2yOzmWiiVimjydZYzCorGjoHA9oWtHUOE/edit"
+            <a href="/swb_reg"
                target="_blank"
                rel="noopener noreferrer">
               <button className="bg-green-600 hover:bg-green-600 text-white font-bold py-3 px-6 rounded mb-8">
