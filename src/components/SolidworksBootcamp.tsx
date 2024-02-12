@@ -29,9 +29,9 @@ export default function SolidworksBootcamp() {
       <div
           className={`flex min-h-screen flex-col items-center justify-between md:flex-row md:p-24 p-10 ${inter.className}`}
       >
-        <div className="absolute inset-0 w-full h-full bg-[#EEE1C6] bg-1 bg-opacity-80"
+        <div className="absolute inset-0 w-full h-full bg-[#EEE1C6] bg-1"
              style={{clipPath: "polygon(0 0, 0 100%, 50% 50%, 100% 0%)"}}></div>
-        <div className="absolute inset-0 w-full h-full bg-red bg-2 bg-opacity-80"
+        <div className="absolute inset-0 w-full h-full bg-red bg-2"
              style={{clipPath: "polygon(100% 100%, 100% 0%, 49.9% 49.9% ,0 100%)"}}></div>
         <div className="md:w-3/4 md:pr-16 z-10 max-md:hidden"></div>
         <div className="md:w-1/4 md:pr-16 z-10">
