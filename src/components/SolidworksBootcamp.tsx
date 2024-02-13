@@ -57,8 +57,9 @@ export default function SolidworksBootcamp() {
               <br className={"md:hidden"} /> Robocon{" "}
             <span className={""}>Presents</span>
           </h1>
-          <h1 className="text-3xl text-white font-extrabold p-5 bg-clip-text text-transparent md:bg-[#eee1c6] bg-gradient-to-r from-[#c20000] to-[#eee1c6]">
-            Solidworks <br /> Bootcamp 2.0
+          <h1 className="text-3xl text-white font-extrabold p-5 flex flex-col">
+            <span className="bg-clip-text text-transparent md:bg-[#eee1c6] bg-gradient-to-r from-[#c20000] to-[#eee1c6]">Solidworks</span>
+            <span className="bg-clip-text text-transparent md:bg-[#eee1c6] bg-gradient-to-r from-[#c20000] to-[#eee1c6]">Bootcamp 2.0</span>
           </h1>
           <p className=" text-black md:text-white mb-8 font-bold">
             Three-day Workshop
