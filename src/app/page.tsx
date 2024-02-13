@@ -14,6 +14,7 @@ import {
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ProjectsDisplay from "@/components/ProjectsDisplay";
+import SolidworksBootcamp from "@/components/SolidworksBootcamp";
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -118,8 +119,13 @@ export default function Home() {
         </div>
       </section>
 
+      {/*Solidworks Bootcamp 2.0*/}
+      <section className="relative max-md:mt-20">
+        <SolidworksBootcamp />
+      </section>
+
       <section>
-        <ProjectsDisplay />
+        <ProjectsDisplay/>
       </section>
 
       {/* Third section */}
@@ -127,11 +133,11 @@ export default function Home() {
         <div className="text-3xl md:text-4xl pl-10 md:pl-44 mt-44 text-white">
           Our Sponsors
         </div>
-        <SponsorCarousel />
+        <SponsorCarousel/>
       </section>
 
       {/* Footer */}
-      <Footer />
+      <Footer/>
     </div>
   );
 }
