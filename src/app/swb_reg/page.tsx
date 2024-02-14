@@ -3,7 +3,7 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
-
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 
 import "./styles.css";
@@ -92,8 +92,13 @@ export default function App() {
   return (
     <div className="App">
       <Header />
-      <h3 className=" justify-center items-center flex text-white">
-        Register Here!!
+      <h3 className=" justify-center items-center text-center md:px-24 px-10 pt-3  text-white flex flex-col">
+       <div className="text-xl m-5">Register Here!! <br /></div>
+
+        SolidWorks is a powerful 3D CAD software used for designing and modeling mechanical components and assemblies. It offers robust features for creating precise designs, simulations, and documentation. SolidWorks is widely utilized across industries for product development and engineering tasks. From automotive to aerospace, SolidWorks is integral to modern manufacturing and product development workflows.
+        {/* <b className="text-red tex"> Price of the workshop: 599 Rs. </b> */}
+        
+        <span className="text-lg text-red font-extrabold mt-5">PRICE : Rs. 599 /- only</span>
       </h3>
       <div className=" flex p-10 gap-10 justify-center items-center flex-wrap">
         <Image
@@ -230,6 +235,9 @@ export default function App() {
           </div>
         </div>
       </div>
+      <div className="text-white text-center justify-center items-center p-8">Upon registration, you will shortly be contacted by our team. Any queries contact us on Instagram <a href="https://www.instagram.com/srmteamrobocon/ " className=" hover:text-red text-lg hover:underline"> @srmteamrobocon. </a>  </div>
+      <Footer/>
     </div>
   );
+ 
 }
