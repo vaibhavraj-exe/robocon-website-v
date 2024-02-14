@@ -6,7 +6,6 @@ import ReCAPTCHA from "react-google-recaptcha";
 
 import Header from "@/components/Header";
 
-
 import "./styles.css";
 
 export default function App() {
@@ -60,7 +59,7 @@ export default function App() {
     }
 
     setLoading(true);
-    setMessage("")
+    setMessage("");
     fetch(
       "https://script.google.com/macros/s/AKfycby1inkfxrxPi2vNKY1vxblVCzLQvBn4kpEnxPC0z1vnBKSSgvBjreY1IxxI-UlYGPsqmw/exec",
       {
@@ -89,13 +88,12 @@ export default function App() {
 
   useEffect(() => {
     console.log("loading", loading);
-    
-  }, [loading])
+  }, [loading]);
   return (
     <div className="App">
       <Header />
       <h3 className=" justify-center items-center flex text-white">
-        Regester Here!!
+        Register Here!!
       </h3>
       <div className=" flex p-10 gap-10 justify-center items-center flex-wrap">
         <Image
