@@ -122,6 +122,7 @@ export default function Header() {
 
           <span className="relative flex h-3 w-3 ">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-sky-400"></span>
             </span>
           <button
             className="px-2 hover:text-black hover:scale-105"
@@ -169,7 +170,8 @@ export default function Header() {
           <div className="px-12 py-2 flex">
             <button className=" text-white font-semibold" onClick={() => router.push("/swb_reg") }>Event Alert!</button>
             <span className="relative flex h-3 w-3 ">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-200 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-sky-400"></span>
             </span>
           </div>
         </div>
