@@ -217,7 +217,7 @@ export default function App() {
                 />
                 <ReCAPTCHA
                   className=" flex justify-center items-center scale-75 flex-wrap"
-                  sitekey="6Ld-Y3ApAAAAAKdw_GfiQCHaPizJFLwok8aMg2Wj"
+                  sitekey="6LezYnApAAAAAPI9TRQOrngBx-dl2FaruV9R4KYP"
                   onChange={onChange}
                 />
               </div>
