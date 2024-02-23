@@ -93,12 +93,12 @@ export default function App() {
     <div className="App">
       <Header />
       <h3 className=" justify-center items-center text-center md:px-24 px-10 pt-3  text-white flex flex-col">
-       <div className="text-xl m-5">Register Here!! <br /></div>
+       <div className="text-xl m-5">SolidWorks Workshop <br /></div>
 
         SolidWorks is a powerful 3D CAD software used for designing and modeling mechanical components and assemblies. It offers robust features for creating precise designs, simulations, and documentation. SolidWorks is widely utilized across industries for product development and engineering tasks. From automotive to aerospace, SolidWorks is integral to modern manufacturing and product development workflows.
         {/* <b className="text-red tex"> Price of the workshop: 599 Rs. </b> */}
         
-        <span className="text-lg text-red font-extrabold mt-5">PRICE : Rs. 599 /- only</span>
+        {/* <span className="text-lg text-red font-extrabold mt-5">PRICE : Rs. 599 /- only</span> */}
       </h3>
       <div className=" flex p-10 gap-10 justify-center items-center flex-wrap">
         <Image
@@ -108,7 +108,7 @@ export default function App() {
           height={350}
           alt=""
         />
-        <div className="">
+        {/* <div className="">
           <div className=" justify-center">
             <form className="max-w-md mx-auto" onSubmit={(e) => Submit(e)}>
               <div className="relative z-0 w-full mb-5 group">
@@ -233,9 +233,10 @@ export default function App() {
               </p>
             )}
           </div>
-        </div>
+        </div> */}
       </div>
-      <div className="text-white text-center justify-center items-center p-8">Upon registration, you will shortly be contacted by our team. Any queries contact us on Instagram <a href="https://www.instagram.com/srmteamrobocon/ " className=" hover:text-red text-lg hover:underline"> @srmteamrobocon. </a>  </div>
+      {/* <div className="text-white text-center justify-center items-center p-8">Upon registration, you will shortly be contacted by our team. Any queries contact us on Instagram <a href="https://www.instagram.com/srmteamrobocon/ " className=" hover:text-red text-lg hover:underline"> @srmteamrobocon. </a>  </div> */}
+    <div className="text-white text-center justify-center items-center p-8 pt-0"><span className="text-lg font-bold">We’re all sold out! <br /></span> Can’t squeeze in another chair. But don’t worry, we’ll be back with more exciting events. Stay tuned!” 🎉</div>
       <Footer/>
     </div>
   );
