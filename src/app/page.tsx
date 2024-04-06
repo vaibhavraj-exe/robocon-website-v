@@ -119,10 +119,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/*Solidworks Bootcamp 2.0*/}
-      <section className="relative max-md:mt-20">
+      {/*Banner section*/}
+      {/* <section className="relative max-md:mt-20">
         <SolidworksBootcamp />
-      </section>
+      </section> */}
 
       <section>
         <ProjectsDisplay/>

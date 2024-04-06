@@ -167,13 +167,14 @@ export default function Header() {
       {/* svg below navbar */}
       <div className="hidden md:flex justify-end mt-5" data-aos="fade-left">
         <div className="nav-bar-clip h-10 bg-red w-64">
-          <div className="px-12 py-2 flex">
+          {/* EVENT alert section*/}
+          {/* <div className="px-12 py-2 flex">
             <button className=" text-white font-semibold" onClick={() => router.push("/swb_reg") }>Event Alert!</button>
             <span className="relative flex h-3 w-3 ">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-200 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-3 w-3 bg-sky-400"></span>
             </span>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
