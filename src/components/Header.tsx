@@ -118,7 +118,7 @@ export default function Header() {
           >
             Home
           </button>
-          <div>
+          {/* <div>
 
           <span className="relative flex h-3 w-3 ">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
@@ -130,7 +130,7 @@ export default function Header() {
           >
             Events
           </button>
-          </div>
+          </div> */}
           <button
             className="px-8 hover:text-black hover:scale-105"
             onClick={() => router.push("/team")}
