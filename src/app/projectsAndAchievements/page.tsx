@@ -197,7 +197,7 @@ const page = () => {
                 unoptimized
               ></Image>
               <div className="text-white text-right text-sm md:text-base pl-1">
-              We participated in the BITS Quark Line Follower Competition 2022 and secured the 1st position winning a cash prize of Rs 30000.
+              Our members participated in the BITS Quark Line Follower Competition 2022 and secured the 1st position winning a cash prize of Rs 30000.
               </div>
             </div>
             <div className="flex items-center justify-center md:w-1/3 h-24 md:h-44 border-r-2 border-red pr-2 md:pr-5">
@@ -211,6 +211,45 @@ const page = () => {
               ></Image>
               <div className="text-white text-right text-sm md:text-base pl-1">
               Team Robocon’s Bot for the problem statement of 2014 was awarded the “Most Economical Bot” by DD Robocon. 
+              </div>
+            </div>
+            <div className="flex items-center justify-center md:w-1/3 h-24 md:h-44 border-r-2 border-red pr-2 md:pr-5">
+              <Image
+                src={`/achievements/Advaya.png`}
+                alt="Advaya Hacks image"
+                width={500}
+                height={500}
+                className="w-auto h-full"
+                unoptimized
+              ></Image>
+              <div className="text-white text-right text-sm md:text-base pl-1">
+              Secured victory in the Advaya Hacks Event that was organized by IGDTU ACM Student Chapter 2022.
+              </div>
+            </div>
+            <div className="flex items-center justify-center md:w-1/3 h-24 md:h-44 border-r-2 border-red pr-2 md:pr-5">
+              <Image
+                src={`/achievements/IIITD.png`}
+                alt="IIITD image"
+                width={500}
+                height={500}
+                className="w-auto h-full"
+                unoptimized
+              ></Image>
+              <div className="text-white text-right text-sm md:text-base pl-1">
+              Recognized among the top ten finalists in the IIITD Innovation Contest.
+              </div>
+            </div>
+            <div className="flex items-center justify-center md:w-1/3 h-24 md:h-44 border-r-2 border-red pr-2 md:pr-5">
+              <Image
+                src={`/achievements/IIM.png`}
+                alt="IIM image"
+                width={500}
+                height={500}
+                className="w-auto h-full"
+                unoptimized
+              ></Image>
+              <div className="text-white text-right text-sm md:text-base pl-1">
+              We reflected in the top ten teams during the Tide 2.0 Innovation Contest by IIM Udaipur 2022.
               </div>
             </div>
           </div>
@@ -229,12 +268,12 @@ const data = [
   {
     name: "IDEX",
     img: `/projects/IDEX.png`,
-    about: `A next gen 3D printed helmet for welders addressing the common challenge of obscured visibility during welding`,
+    about: `A next gen 3D printed helmet for welders addressing the common challenge of obscured visibility during welding.`,
   },
   {
     name: "SPIDER BOT",
     img: `/projects/SPIDER.png`,
-    about: `A next gen 3D printed helmet for welders addressing the common challenge of obscured visibility during weldingPrimarily designed for search and rescue missions, the Spider Bot excels in navigating diverse terrains and reaching otherwise inaccessible areas.`,
+    about: `A next gen 3D printed helmet for welders addressing the common challenge of obscured visibility during welding primarily designed for search and rescue missions, the Spider Bot excels in navigating diverse terrains and reaching otherwise inaccessible areas.`,
   },
   {
     name: "EVA",
