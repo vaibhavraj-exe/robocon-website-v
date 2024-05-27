@@ -35,42 +35,42 @@ export default function MemberCard({
           <div className="absolute inset-0 bg-slate-100 flex">
             <Image
               src={`/team/photos/${Name}.jpg`}
-              alt="Project data image"
+              alt={`${Name}'s image`}
               width={500}
               height={500}
               className="w-auto h-full"
               unoptimized
-            ></Image>
+            />
             <h1 className="text-xl absolute bottom-2 z-10 w-full bg-black/50 text-white group-hover:hidden text-center">
-              {Name} <br /> <p className="text-lg">{Designation}</p>{" "}
+              {Name} <br /> <p className="text-lg">{Designation}</p>
             </h1>
           </div>
           <div className="absolute inset-0 h-full w-full bg-red/80 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden] flex flex-col items-center justify-center gap-3 py-5 px-3">
             <div className="flex gap-5 m-4">
-              {Facebook ? (
+              {Facebook && (
                 <Link href={Facebook}>
                   <FacebookBoxFillIcon
                     size={50}
                     className="hover:fill-white hover:scale-105 hover:cursor-pointer"
                   />
                 </Link>
-              ) : null}
-              {Linkedin ? (
+              )}
+              {Linkedin && (
                 <Link href={Linkedin}>
-                <LinkedinBoxFillIcon
-                  size={50}
-                  className="hover:fill-white hover:scale-105 hover:cursor-pointer"
-                />
+                  <LinkedinBoxFillIcon
+                    size={50}
+                    className="hover:fill-white hover:scale-105 hover:cursor-pointer"
+                  />
                 </Link>
-              ) : null}
-              {Instagram ? (
+              )}
+              {Instagram && (
                 <Link href={Instagram}>
-                <InstagramFillIcon
-                  size={50}
-                  className="hover:fill-white hover:scale-105 hover:cursor-pointer"
-                />
+                  <InstagramFillIcon
+                    size={50}
+                    className="hover:fill-white hover:scale-105 hover:cursor-pointer"
+                  />
                 </Link>
-              ) : null}
+              )}
             </div>
           </div>
         </div>
