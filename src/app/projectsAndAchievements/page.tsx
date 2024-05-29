@@ -241,7 +241,7 @@ const page = () => {
             </div>
             <div className="flex items-center justify-center md:w-1/3 h-24 md:h-44 border-r-2 border-red pr-2 md:pr-5">
               <Image
-                src={`/achievements/IIM.png`}
+                src={`/achievements/IIMU.png`}
                 alt="IIM image"
                 width={500}
                 height={500}
