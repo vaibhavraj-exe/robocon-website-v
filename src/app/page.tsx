@@ -111,7 +111,7 @@ export default function Home() {
             >
               <div className="text-3xl mb-5 font-bold text-white">Our Vision</div>
               <div className="text-xl w-full text-white">
-                Emerge as a renowned robotics systems lab centred at SRM IST,
+                Emerge as a renowned robotics systems lab centred at SRMIST,
                 INDIA by inculcating a collaborative work culture.
               </div>
             </div>
