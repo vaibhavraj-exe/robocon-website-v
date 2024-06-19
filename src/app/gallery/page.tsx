@@ -12,7 +12,7 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { EffectCoverflow, Pagination, Navigation } from "swiper"; //this is the problem.
+import { EffectCoverflow, Pagination, Navigation } from "swiper/modules"; //this is the problem.
 
 import slide_image_1 from "/public/gallery/photos/col1 (1).png";
 import slide_image_2 from "/public/gallery/photos/col1 (2).png";
@@ -51,7 +51,7 @@ export default function Gallery() {
             modifier: 2.5,
           }}
           pagination={{ clickable: true }}
-          navigation={{ clickable: true }}
+          // navigation={{ clickable: true }}
           modules={[EffectCoverflow, Pagination, Navigation]}
           className="swiper_container"
         >
@@ -77,11 +77,11 @@ export default function Gallery() {
 
           <div className="swiper-controler">
             <div className="swiper-button-prev slider-arrow">
-              <ion-icon name="arrow-back-outline"></ion-icon>
+              {/* <ion-icon name="arrow-back-outline"></ion-icon> */}
             </div>
 
             <div className="swiper-button-next slider-arrow">
-              <ion-icon name="arrow-forward-outline"></ion-icon>
+              {/* <ion-icon name="arrow-forward-outline"></ion-icon> */}
             </div>
             <div className="swiper-pagination"></div>
           </div>
