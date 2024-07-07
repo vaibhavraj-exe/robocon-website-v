@@ -37,17 +37,17 @@ export default function Team() {
   return (
     <div className=" overflow-x-hidden ">
       <Header />
-      <section className="mx-28 mt-20">
+      <section className="md:mx-28 mt-20">
         <h1 className="mb-10 text-4xl text-white text-center md:text-left w-full  whitespace-nowrap">
           Our Team
         </h1>
         <div>
           {loading ? (
             <div className="p-5">
-            <div className="h-8 w-1/3 bg-gray-700 mb-6 animate-pulse rounded"></div>
+            <div className="h-8 md:w-1/3 bg-gray-700 mb-6 animate-pulse rounded"></div>
             <div className="flex flex-wrap gap-10 justify-around md:justify-around">
               {[...Array(20)].map((_, index) => (
-                <div key={index} className="w-1/5 h-48 bg-gray-700 animate-pulse rounded-md p-4 flex flex-col gap-4">
+                <div key={index} className="w-[300px] h-[300px] bg-gray-700 animate-pulse rounded-md p-4 flex flex-col gap-4">
                   <div className="w-12 h-12 bg-gray-900 rounded-full"></div>
                   <div className="h-4 bg-gray-900 rounded"></div>
                   <div className="h-4 bg-gray-900 rounded"></div>
