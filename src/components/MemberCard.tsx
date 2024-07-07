@@ -34,7 +34,7 @@ export default function MemberCard({
         <div className="relative h-full w-full shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-focus:[transform:rotateY(180deg)] group-hover:[transform:rotateY(180deg)]">
           <div className="absolute inset-0 bg-slate-100 flex">
             <Image
-              src={`/team/photos/${Name}.jpg`}
+              src={`/team/photos/${Name.trimEnd()}.jpg`}
               alt="Project data image"
               width={500}
               height={500}
