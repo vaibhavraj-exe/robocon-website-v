@@ -1,9 +1,10 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Aldrich } from "next/font/google";
-const aldrich = Aldrich({ weight: '400',subsets: ["latin"] });
-import 'aos/dist/aos.css';
+const aldrich = Aldrich({ weight: "400", subsets: ["latin"] });
+import "aos/dist/aos.css";
 import MenuContextProvider from "@/context/MenuContextProvider";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "srmteamrobocon",
@@ -15,11 +16,14 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-
-  
   return (
     <html lang="en" className="!scroll-smooth">
-      <body className={aldrich.className}><MenuContextProvider>{children}</MenuContextProvider></body>
+      <body className={aldrich.className}>
+        <MenuContextProvider>
+          {children}
+          <Analytics />
+        </MenuContextProvider>
+      </body>
     </html>
   );
 }

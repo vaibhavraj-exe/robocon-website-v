@@ -111,7 +111,7 @@ export default function Home() {
             >
               <div className="text-3xl mb-5 font-bold text-white">Our Vision</div>
               <div className="text-xl w-full text-white">
-                Emerge as a renowned robotics systems lab centred at SRM IST,
+                Emerge as a renowned robotics systems lab centred at SRMIST,
                 INDIA by inculcating a collaborative work culture.
               </div>
             </div>
@@ -119,10 +119,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/*Solidworks Bootcamp 2.0*/}
-      <section className="relative max-md:mt-20">
+      {/*Banner section*/}
+      {/* <section className="relative max-md:mt-20">
         <SolidworksBootcamp />
-      </section>
+      </section> */}
 
       <section>
         <ProjectsDisplay/>
