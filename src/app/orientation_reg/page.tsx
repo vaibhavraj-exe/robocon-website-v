@@ -24,6 +24,8 @@ export default function App() {
     const officialEmail = formData.get("OfficialSRMEmailID");
     const contactNumber = formData.get("ContactNumber");
     const WhatsApp = formData.get("WhatsAppNumber");
+    const domain1 = formData.get("Domain1");
+    const domain2 = formData.get("Domain2");
 
     // Email validation for @srmist.edu.in domain
     if (officialEmail) {
@@ -61,7 +63,7 @@ export default function App() {
     setLoading(true);
     setMessage("");
     fetch(
-      "https://script.google.com/macros/s/AKfycbxNfnqTAHF0yp04-hhekOFZ-0Q40WZf9nIOTTmKwjXfHjxRXapBdc3KU9ADFH-aecne/exec",
+      "https://script.google.com/macros/s/AKfycbyuoUw7O0eUfix3pZORKtVN5wNBIGHm6rWI4O6V1ANDJDaN6RojTSPWVeceWV7HDGCi/exec",
       {
         method: "POST",
         body: formData,
@@ -93,16 +95,16 @@ export default function App() {
     <div className="App">
       <Header />
       <h3 className=" justify-center items-center text-center md:px-24 px-10 pt-3 text-xl text-white flex flex-col">
-       <div className="text-xl m-5">Register Here!! <br /></div>
-
+        <div className="text-xl m-5">
+          Register Here!! <br />
+        </div>
         For Our Orientation.
-        
         <span className="text-lg text-red font-extrabold mt-5"></span>
       </h3>
       <div className=" flex p-10 gap-10 justify-center items-center flex-wrap">
         <Image
           className=" rounded-lg"
-          src="/events/orientation2024.jpg"
+          src="/events/orientation2024.png"
           width={340}
           height={340}
           alt=""
@@ -130,6 +132,8 @@ export default function App() {
                   id="Full Registration Number"
                   className="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                   placeholder=" "
+                  pattern="^(RA23|RA24)[A-Za-z0-9]{11}$"
+  title="The registration number must start with RA23 or RA24 and be 15 characters long."
                   required
                 />
                 <label className="peer-focus:font-medium absolute text-sm text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
@@ -208,6 +212,56 @@ export default function App() {
                 </div>
               </div>
 
+              <div className="flex gap-7 pb-3 w-fit">
+                <div>
+                  <label
+                    htmlFor="Domain"
+                    className="block mb-2 text-sm font-medium text-white whitespace-nowrap"
+                  >
+                    1st Domain choice
+                  </label>
+                  <select
+                    required
+                    name="Domain1"
+                    id="Domain"
+                    className="bg-gray-50 border border-gray-300 text-sm rounded-lg p-1 focus:ring-blue-500 focus:border-blue-500 block   placeholder-gray-400 text-black "
+                  >
+                    <option disabled selected value="">
+                      select any one
+                    </option>
+                    <option value="Web Development">Web Development</option>
+                    <option value="MCSOD-Corporate">MCSOD-Corporate</option>
+                    <option value="IESED-Electronics">SIESED-Electronics</option>
+                    <option value="SPACED-Coding">SPACED-Coding</option>
+                    <option value="SAMBED-Mechanical">SAMBED-Mechanical</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="Domain"
+                    className="block mb-2 text-sm font-medium text-white whitespace-nowrap"
+                  >
+                    2nd Domain choice
+                  </label>
+                  <select
+                  required
+                    name="Domain2"
+                    id="Domain"
+                    className="bg-gray-50 border border-gray-300 p-1 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block   placeholder-gray-400 text-black "
+                  >
+                    <option disabled selected value="">
+                      select any one
+                    </option>
+                    <option value="Web Development">Web Development</option>
+                    <option value="MCSOD-Corporate">MCSOD-Corporate</option>
+                    <option value="IESED-Electronics">SIESED-Electronics</option>
+                    <option value="SPACED-Coding">SPACED-Coding</option>
+                    <option value="SAMBED-Mechanical">SAMBED-Mechanical</option>
+                  </select>
+                </div>
+              </div>
+
               <div className="flex justify-center items-center flex-wrap">
                 <input
                   name="Name"
@@ -234,9 +288,17 @@ export default function App() {
           </div>
         </div>
       </div>
-      <div className="text-white text-center justify-center items-center p-8">Any queries contact us on Instagram <a href="https://www.instagram.com/srmteamrobocon/ " className=" hover:text-red text-lg hover:underline"> @srmteamrobocon. </a>  </div>
-      <Footer/>
+      <div className="text-white text-center justify-center items-center p-8">
+        Any queries contact us on Instagram{" "}
+        <a
+          href="https://www.instagram.com/srmteamrobocon/ "
+          className=" hover:text-red text-lg hover:underline"
+        >
+          {" "}
+          @srmteamrobocon.{" "}
+        </a>{" "}
+      </div>
+      <Footer />
     </div>
   );
- 
 }
