@@ -21,6 +21,18 @@ const photoNames = [
     "col4 (2).png",
     "col4 (3).png",
     "col4 (5).png",
+    "col5 (1).jpg",
+    "col5 (2).jpg",
+    "col5 (3).jpg",
+    "col5 (4).jpg",
+    "col5 (5).jpg",
+    "col5 (6).jpg",
+    "col5 (7).jpg",
+    "col5 (8).jpg",
+    "col5 (9).jpg",
+    "col5 (10).jpg",
+    "col5 (11).jpg",
+    "col6 (1).jpg",
   ];
 
   export default photoNames;
