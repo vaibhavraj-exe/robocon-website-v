@@ -118,7 +118,7 @@ export default function Header() {
           >
             Home
           </button>
-          {/* <div>
+          <div>
 
           <span className="relative flex h-3 w-3 ">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
@@ -126,11 +126,11 @@ export default function Header() {
             </span>
           <button
             className="px-2 hover:text-black hover:scale-105"
-            onClick={() => router.push("/swb_reg")}
+            onClick={() => router.push("/orientation_reg")}
           >
             Events
           </button>
-          </div> */}
+          </div>
           <button
             className="px-8 hover:text-black hover:scale-105"
             onClick={() => router.push("/team")}
@@ -168,13 +168,13 @@ export default function Header() {
       <div className="hidden md:flex justify-end mt-5" data-aos="fade-left">
         <div className="nav-bar-clip h-10 bg-red w-64">
           {/* EVENT alert section*/}
-          {/* <div className="px-12 py-2 flex">
-            <button className=" text-white font-semibold" onClick={() => router.push("/swb_reg") }>Event Alert!</button>
+          <div className="px-12 py-2 flex">
+            <button className=" text-white font-semibold" onClick={() => router.push("/orientation_reg") }>Event Alert!</button>
             <span className="relative flex h-3 w-3 ">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-200 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-3 w-3 bg-sky-400"></span>
             </span>
-          </div> */}
+          </div>
         </div>
       </div>
     </div>
