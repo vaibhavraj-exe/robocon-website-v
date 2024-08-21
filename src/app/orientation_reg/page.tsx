@@ -255,7 +255,7 @@ export default function App() {
                     </option>
                     <option value="Web Development">Web Development</option>
                     <option value="MCSOD-Corporate">MCSOD-Corporate</option>
-                    <option value="IESED-Electronics">SIESED-Electronics</option>
+                    <option value="SIESED-Electronics">SIESED-Electronics</option>
                     <option value="SPACED-Coding">SPACED-Coding</option>
                     <option value="SAMBED-Mechanical">SAMBED-Mechanical</option>
                   </select>
