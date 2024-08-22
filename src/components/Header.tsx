@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image";
 import { useContext, useEffect } from "react";
 import CloseFillIcon from "remixicon-react/CloseFillIcon";

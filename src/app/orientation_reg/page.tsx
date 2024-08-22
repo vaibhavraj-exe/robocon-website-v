@@ -7,9 +7,11 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 
 import "./styles.css";
+import { useRouter } from "next/navigation";
 
 export default function App() {
   const [captchaVerified, setCaptchaVerified] = useState(false);
+  const router = useRouter();
 
   const onChange = () => {
     setCaptchaVerified(true);
@@ -26,6 +28,7 @@ export default function App() {
     const WhatsApp = formData.get("WhatsAppNumber");
     const domain1 = formData.get("Domain1");
     const domain2 = formData.get("Domain2");
+
 
     // Email validation for @srmist.edu.in domain
     if (officialEmail) {
@@ -62,6 +65,7 @@ export default function App() {
 
     setLoading(true);
     setMessage("");
+    setError(false);
     fetch(
       "https://script.google.com/macros/s/AKfycbyuoUw7O0eUfix3pZORKtVN5wNBIGHm6rWI4O6V1ANDJDaN6RojTSPWVeceWV7HDGCi/exec",
       {
@@ -73,6 +77,9 @@ export default function App() {
         if (response.ok) {
           // Registration successful
           setMessage("YOU ARE REGISTERED FOR THE EVENT");
+          setTimeout(() => {
+            router.push("/orientation_reg/success");
+          });
         } else {
           // Registration failed
           setMessage("Failed to register. Please try again.");
@@ -80,6 +87,7 @@ export default function App() {
         setLoading(false);
       })
       .catch((error) => {
+        setError(true);
         console.error("Error registering:", error);
         setMessage("Failed to register. Please try again.");
         setLoading(false);
@@ -87,6 +95,7 @@ export default function App() {
   }
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     console.log("loading", loading);
@@ -266,7 +275,8 @@ export default function App() {
                 <input
                   name="Name"
                   type="submit"
-                  className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  className={`text-white ${loading ? "bg-gray-900" : "bg-blue-700 hover:bg-blue-800"} focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800`}
+                  value={loading ? "Loading..." : "Register"}
                 />
                 <ReCAPTCHA
                   className=" flex justify-center items-center scale-75 flex-wrap"
@@ -275,11 +285,11 @@ export default function App() {
                 />
               </div>
             </form>
-            {loading && message === "" && (
+            {/* {loading && message === "" && (
               <p className="text-white flex justify-center items-center p-8">
                 Loading...
               </p>
-            )}
+            )} */}
             {message && (
               <p className="text-white flex justify-center items-center p-8">
                 {message}
