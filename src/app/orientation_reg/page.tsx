@@ -239,7 +239,7 @@ export default function App() {
                       select any one
                     </option>
                     <option value="Web Development">Web Development</option>
-                    <option value="MCSOD-Corporate">MCSOD-Creatives</option>
+                    <option value="MCSOD-Corporate">MCSOCD-Creatives</option>
                     <option value="IESED-Electronics">SIESED-Electronics</option>
                     <option value="SPACED-Coding">SPACED-Coding</option>
                     <option value="SAMBED-Mechanical">SAMBED-Mechanical</option>
@@ -263,7 +263,7 @@ export default function App() {
                       select any one
                     </option>
                     <option value="Web Development">Web Development</option>
-                    <option value="MCSOD-Corporate">MCSOD-Creatives</option>
+                    <option value="MCSOD-Corporate">MCSOCD-Creatives</option>
                     <option value="SIESED-Electronics">SIESED-Electronics</option>
                     <option value="SPACED-Coding">SPACED-Coding</option>
                     <option value="SAMBED-Mechanical">SAMBED-Mechanical</option>
