@@ -1,7 +1,8 @@
 "use client";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Image from "next/image";
+import Achievement from "@/components/AchievementsCard";
+import { achievements } from "@/constants/constants"
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 
@@ -58,7 +59,7 @@ const page = () => {
   return (
     <div>
       <Header />
-          <div className="text-xl whitespace-nowrap md:text-4xl text-white mb-10 ml-10 md:ml-40 mt-10">Our Projects</div>
+      <div className="text-xl whitespace-nowrap md:text-4xl text-white mb-10 ml-10 md:ml-40 mt-10">Our Projects</div>
       <div className="w-3/4 m-auto">
         <div className="mt-20">
           <Slider {...settings}>
@@ -117,143 +118,18 @@ const page = () => {
 
       {/* <div className={`${resets.Resets} ${classes.root}`}>
         <div className={classes.container}> */}
-        <div className=" mx-4 md:mx-40">
-          <div className="text-xl whitespace-nowrap md:text-4xl text-white mb-10">Our Achievements</div>
-          <div className="flex flex-wrap gap-x-28 gap-y-7 md:gap-y-12 justify-center mb-20">
-            {/* {[1, 2, 3, 4, 5, 6].map((e, i) => (
-            <div className="flex items-center justify-center md:w-1/3 h-24 md:h-44 border-r-2 border-red pr-2 md:pr-5" key={i}>
-              <Image
-                src={`/projects/image8.png`}
-                alt="Project data image"
-                width={500}
-                height={500}
-                className="w-auto h-full"
-                unoptimized
-              ></Image>
-              <div className="text-white text-right text-sm md:text-base pl-1">
-                Six teams from SRM Team Robocon participated in the Smart India
-                Hackathon, an initiative taken by the Government of India.
-              </div>
-            </div>))} */}
-            <div className="flex items-center justify-center md:w-1/3 h-24 md:h-44 border-r-2 border-red pr-2 md:pr-5">
-              <Image
-                src={`/achievements/robo.jpg`}
-                alt="Project data image"
-                width={500}
-                height={500}
-                className="w-auto h-full"
-                unoptimized
-              ></Image>
-              <div className="text-white text-right text-sm md:text-base pl-1">
-              SRM Team Robocon finished 11th in DD Robocon 2023, out of 100+ teams that participated in the event.
-              </div>
-            </div>
-            <div className="flex items-center justify-center md:w-1/3 h-24 md:h-44 border-r-2 border-red pr-2 md:pr-5">
-              <Image
-                src={`/achievements/fusion.png`}
-                alt="Project data image"
-                width={500}
-                height={500}
-                className="w-auto h-full"
-                unoptimized
-              ></Image>
-              <div className="text-white text-right text-sm md:text-base pl-1">
-              Our team was awarded the Fusion 360 Best User Experience Award with a cash prize of Rs 10,000.
-              </div>
-            </div>
-            <div className="flex items-center justify-center md:w-1/3 h-24 md:h-44 border-r-2 border-red pr-2 md:pr-5">
-              <Image
-                src={`/achievements/SIH.png`}
-                alt="Project data image"
-                width={500}
-                height={500}
-                className="w-auto h-full"
-                unoptimized
-              ></Image>
-              <div className="text-white text-right text-sm md:text-base pl-1">
-              3 Teams from SRM Team Robocon led by members of the club qualified from the internal SIH 2023.
-              </div>
-            </div>
-            <div className="flex items-center justify-center md:w-1/3 h-24 md:h-44 border-r-2 border-red pr-2 md:pr-5">
-              <Image
-                src={`/achievements/SRM.png`}
-                alt="Project data image"
-                width={500}
-                height={500}
-                className="w-auto h-full"
-                unoptimized
-              ></Image>
-              <div className="text-white text-right text-sm md:text-base pl-1">
-              Our team secured the NewGen IEDC SRM Grant of rupees 1 lakh at the IDEX hackathon 2022.
-              </div>
-            </div>
-            <div className="flex items-center justify-center md:w-1/3 h-24 md:h-44 border-r-2 border-red pr-2 md:pr-5">
-              <Image
-                src={`/achievements/BITS.png`}
-                alt="Project data image"
-                width={500}
-                height={500}
-                className="w-auto h-full"
-                unoptimized
-              ></Image>
-              <div className="text-white text-right text-sm md:text-base pl-1">
-              Our members participated in the BITS Quark Line Follower Competition 2022 and secured the 1st position winning a cash prize of Rs 30000.
-              </div>
-            </div>
-            <div className="flex items-center justify-center md:w-1/3 h-24 md:h-44 border-r-2 border-red pr-2 md:pr-5">
-              <Image
-                src={`/achievements/robo.jpg`}
-                alt="Project data image"
-                width={500}
-                height={500}
-                className="w-auto h-full"
-                unoptimized
-              ></Image>
-              <div className="text-white text-right text-sm md:text-base pl-1">
-              Team Robocon’s Bot for the problem statement of 2014 was awarded the “Most Economical Bot” by DD Robocon. 
-              </div>
-            </div>
-            <div className="flex items-center justify-center md:w-1/3 h-24 md:h-44 border-r-2 border-red pr-2 md:pr-5">
-              <Image
-                src={`/achievements/Advaya.png`}
-                alt="Advaya Hacks image"
-                width={500}
-                height={500}
-                className="w-auto h-full"
-                unoptimized
-              ></Image>
-              <div className="text-white text-right text-sm md:text-base pl-1">
-              Secured victory in the Advaya Hacks Event that was organized by IGDTU ACM Student Chapter 2022.
-              </div>
-            </div>
-            <div className="flex items-center justify-center md:w-1/3 h-24 md:h-44 border-r-2 border-red pr-2 md:pr-5">
-              <Image
-                src={`/achievements/IIITD.png`}
-                alt="IIITD image"
-                width={500}
-                height={500}
-                className="w-auto h-full"
-                unoptimized
-              ></Image>
-              <div className="text-white text-right text-sm md:text-base pl-1">
-              Recognized among the top ten finalists in the IIITD Innovation Contest.
-              </div>
-            </div>
-            <div className="flex items-center justify-center md:w-1/3 h-24 md:h-44 border-r-2 border-red pr-2 md:pr-5">
-              <Image
-                src={`/achievements/IIMU.png`}
-                alt="IIM image"
-                width={500}
-                height={500}
-                className="w-auto h-full"
-                unoptimized
-              ></Image>
-              <div className="text-white text-right text-sm md:text-base pl-1">
-              We reflected in the top ten teams during the Tide 2.0 Innovation Contest by IIM Udaipur 2022.
-              </div>
-            </div>
-          </div>
-          </div>
+      <div className=" mx-4 md:mx-40">
+        <div className="text-xl whitespace-nowrap md:text-4xl text-white mb-10">Our Achievements</div>
+        <div className="flex flex-wrap gap-x-28 gap-y-7 md:gap-y-12 justify-center mb-20">
+          {achievements.map((achievement: {
+            imageSrc: string;
+            altText: string;
+            description: string;
+          }, index: number) => {
+            return <Achievement key={index} imageSrc={achievement.imageSrc} description={achievement.description} altText={achievement.altText} />
+          })}
+        </div>
+      </div>
       <Footer />
     </div>
   );
@@ -281,7 +157,7 @@ const data = [
     about: `Enhanced Visitor Assistant fuses the functions of a Visitor Assistant with an Autonomous Professor, presenting an intelligent humanoid robot, which makes use of automated control systems and cutting-edge AI technology.`,
   },
   {
-    name: "Two Factor RFID Authentication Device",
+    name: "Two Factor RFID Authentication Device",
     img: `/projects/RFID.jpg`,
     about: `The Two Factor Authentication RFID Security System is a security measure that uses RFID technology along with another authentication factor to provide a higher level of security.`,
   },
