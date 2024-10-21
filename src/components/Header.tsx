@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import { useContext, useEffect } from "react";
@@ -76,6 +76,12 @@ export default function Header() {
           </button>
           <button
             className="px-5 hover:text-red hover:scale-105"
+            onClick={() => router.push("/events")}
+          >
+            Events
+          </button>
+          <button
+            className="px-5 hover:text-red hover:scale-105"
             onClick={() => router.push("/alumni")}
           >
             Alumni
@@ -120,7 +126,7 @@ export default function Header() {
           >
             Home
           </button>
-          <div>
+          {/* <div>
 
           <span className="relative flex h-3 w-3 ">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
@@ -132,7 +138,7 @@ export default function Header() {
           >
             Events
           </button>
-          </div>
+          </div> */}
           <button
             className="px-8 hover:text-black hover:scale-105"
             onClick={() => router.push("/team")}
@@ -150,6 +156,12 @@ export default function Header() {
             onClick={() => router.push("/gallery")}
           >
             Gallery
+          </button>
+          <button
+            className="px-8 hover:text-black hover:scale-105"
+            onClick={() => router.push("/events")}
+          >
+            Events
           </button>
           <button
             className="px-8 hover:text-black hover:scale-105"
