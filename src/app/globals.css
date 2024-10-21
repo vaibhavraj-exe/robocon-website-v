@@ -30,7 +30,6 @@
   background: red;
 }
 
-
 /* Scroll Bar */
 :root {
   --primary: #000000;
@@ -64,13 +63,24 @@
   background-color: var(--tertiary);
 }
 
-
 @layer utilities {
   .no-scrollbar::-webkit-scrollbar {
-      display: none;
+    display: none;
   }
   .no-scrollbar {
-      -ms-overflow-style: none;
-      scrollbar-width: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
+
+.dialog-box {
+  width: 400px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
 }

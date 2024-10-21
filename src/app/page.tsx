@@ -121,9 +121,9 @@ export default function Home() {
       </section>
 
       {/*Banner section*/}
-      <section className="relative max-md:mt-20">
+      {/* <section className="relative max-md:mt-20">
         <RoboConEvent />
-      </section>
+      </section> */}
 
       <section>
         <ProjectsDisplay/>
