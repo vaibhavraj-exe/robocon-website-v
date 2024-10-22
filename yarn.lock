@@ -206,6 +206,11 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@onlook/nextjs@^2.1.1":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@onlook/nextjs/-/nextjs-2.1.1.tgz#72adb1c789e7cbad04c88309fe37f460cad12ec0"
+  integrity sha512-BHqR2JWlRNj7p6HEW/Ug358xx+kDNAyrpoZgY8Quv90Cw3PEpIurDz6ztGAUUfB27mkJ/bKEosksYd0302tPNg==
+
 "@rollup/plugin-babel@^6.0.3":
   version "6.0.3"
   resolved "https://registry.npmjs.org/@rollup/plugin-babel/-/plugin-babel-6.0.3.tgz"
