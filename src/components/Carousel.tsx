@@ -54,7 +54,7 @@ const events: Event[] = [
       '/events/gallery/sw1/IMG_20230424_191956_474.jpg'],
   },
   {
-    coverImage: "/events/gallery/sw1/IMG-20230421-WA0034.jpg",
+    coverImage: "/events/gallery/Altium/GKVK9246.JPG",
     name: "Altium Event",
     description: `Rae Callender, VP of Altium Designer Education, visited SRMIST on September 4, 2024, to interact with student teams using Altium software in their robotics, electronics, and circuit design projects. Among the teams was SRM Team Robocon, represented by Mohammed Sadriwala, who discussed the importance of Altium in streamlining their design processes. The visit emphasized the software's impact on student projects and explored future collaborations between Altium and SRMIST.`,
     abstract: `On September 4, 2024, SRM Institute of Science and Technology hosted Rae Callender, Vice President of Altium Designer Education, for an engaging visit focused on student teams utilizing Altium Designer in their projects. Accompanied by Mr. Vikram Poojary and Mr. Madhesh Perumal, Rae interacted with four prominent student engineering teams, including SRM Team Robocon. The teams demonstrated how Altium Designer has been instrumental in improving their design precision and workflow efficiency. The visit highlighted the significant role Altium plays in shaping students’ engineering careers and laid the foundation for future collaborations between SRMIST and Altium.`,
@@ -81,7 +81,6 @@ const events: Event[] = [
 
 export default function Carousel() {
   const [isOpen, open] = useState<Event | null>(null);
-  console.log(isOpen);
   useEffect(() => {
     console.log(isOpen);
   }, [isOpen]);
