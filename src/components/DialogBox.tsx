@@ -25,7 +25,7 @@ export default function DialogBox({
     });
   }, []);
   return (
-    <div className="dialog-box text-white bg-black overflow-y-scroll w-full h-full grid place-items-center no-scrollbar">
+    <div className="dialog-box text-white bg-black/50 backdrop-blur-2xl overflow-y-scroll w-full h-full grid place-items-center no-scrollbar">
       <div className=" no-scrollbar grid gap-2 w-full h-full lg:w-5/6 py-2 px-4 border-y-0 rounded-3xl shadow-red shadow-2xl overflow-y-scroll">
         <div className="grid place-items-end">
           <button className="close-button bg-red p-2 rounded-lg"
@@ -86,18 +86,28 @@ export default function DialogBox({
           </button>
         </div>
         {isImageOpen && (
-          <div className="image-box grid bg-black w-full h-full lg:w-fit lg:h-fit place-items-center">
-            <div className="grid place-items-end w-full">
-              <button className="bg-red p-2 rounded-lg"
-                onClick={() => {
-                  setImageOpen(null);
-                }}
-              >
-                Close
-              </button>
-            </div>
-            <div className="bg-white p-4 h-screen overflow-auto"><Image src={isImageOpen} alt="" width={1200} height={1200} loader={() => imgLoader(isImageOpen)} className="rounded-lg" /></div>
+          <div className="image-box bg-black/50 backdrop-blur-xl rounded-xl p-2 w-full h-full lg:w-fit lg:h-fit">
+          <div className="grid place-items-end w-full">
+            <button
+              className="bg-red p-2 rounded-lg"
+              onClick={() => {
+                setImageOpen(null);
+              }}
+            >
+              Close
+            </button>
           </div>
+          <div className="w-full h-full lg:h-fit p-2 grid place-items-center max-h-screen">
+            <Image
+              src={isImageOpen}
+              alt=""
+              width={1200}
+              height={1200}
+              loader={() => imgLoader(isImageOpen)}
+              className="rounded-lg w-full h-full lg:max-h-[128vh] max-h-screen object-contain"
+            />
+          </div>
+        </div>
         )}
       </div>
     </div>
