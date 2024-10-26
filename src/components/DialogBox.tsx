@@ -17,7 +17,6 @@ export default function DialogBox({
   setOpen,
   isOpen
 }: Event & { setOpen: (isOpen: Event | null) => void; isOpen: boolean }) {
-  const [isImageOpen, setImageOpen] = useState<string | null>(null);
   useEffect(() => {
     AOS.init({
       duration: 150,
@@ -68,9 +67,6 @@ export default function DialogBox({
                 width={2400}
                 height={2400}
                 loader={() => imgLoader(image)}
-                onClick={() => {
-                  setImageOpen(image);
-                }}
               />
             ))}
           </Masonry>
@@ -85,30 +81,7 @@ export default function DialogBox({
             Close
           </button>
         </div>
-        {isImageOpen && (
-          <div className="image-box bg-black/50 backdrop-blur-xl rounded-xl p-2 w-full h-full lg:w-fit lg:h-fit hidden lg:block">
-          <div className="grid place-items-end w-full">
-            <button
-              className="bg-red p-2 rounded-lg"
-              onClick={() => {
-                setImageOpen(null);
-              }}
-            >
-              Close
-            </button>
-          </div>
-          <div className="w-full h-full lg:h-fit p-2 grid place-items-center max-h-screen">
-            <Image
-              src={isImageOpen}
-              alt=""
-              width={1200}
-              height={1200}
-              loader={() => imgLoader(isImageOpen)}
-              className="rounded-lg w-full h-full lg:max-h-[80vh] max-h-screen object-contain"
-            />
-          </div>
-        </div>
-        )}
+        
       </div>
     </div>
   );

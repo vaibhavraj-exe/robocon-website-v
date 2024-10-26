@@ -27,15 +27,20 @@ const events: Event[] = [
     description: `SolidWorks Bootcamp 2.0, organized by SRM Team Robocon, focused on enhancing CAD modeling skills over three days. Participants engaged in hands-on sessions and a competitive 3D modeling challenge. The workshop provided practical experience with SolidWorks, culminating in the grand prize—a Full-Year Subscription License for the best modeler.`,
     abstract: `SRM Team Robocon successfully organized SolidWorks Bootcamp 2.0, a 3-day intensive workshop held from February 26-28, 2024. Designed to equip participants with essential CAD modeling skills, the workshop featured expert-led, hands-on training sessions focused on SolidWorks, one of the most widely used CAD software in engineering and product design. The event culminated in a 3D modeling competition, allowing participants to apply their newly acquired skills in a real-world scenario. The top-performing participant was awarded a prestigious Full-Year Subscription License of SolidWorks. The workshop not only enhanced technical proficiency but also fostered collaboration and innovation, providing participants with an invaluable learning experience and a platform to showcase their creativity in CAD design.`,
     gallery: [
-      '/events/gallery/sw2/PXL_20240226_060420417.jpg',
-      '/events/gallery/sw2/PXL_20240226_073410947.jpg',
-      '/events/gallery/sw2/PXL_20240226_091814266.jpg',
-      '/events/gallery/sw2/PXL_20240226_092040330.PORTRAIT.ORIGINAL.jpg',
-      '/events/gallery/sw2/PXL_20240226_103224247.jpg',
-      '/events/gallery/sw2/PXL_20240227_083032522.jpg',
-      '/events/gallery/sw2/PXL_20240227_095017989.jpg',
+      '/events/gallery/sw2/IMG_0658.jpg', 
+      '/events/gallery/sw2/IMG_0672.jpg', 
+      '/events/gallery/sw2/IMG_0719.jpg', 
+      '/events/gallery/sw2/IMG_0721.jpg', 
+      '/events/gallery/sw2/IMG_0754.jpg', 
+      '/events/gallery/sw2/PXL_20240226_060420417.jpg', 
+      '/events/gallery/sw2/PXL_20240226_073410947.jpg', 
+      '/events/gallery/sw2/PXL_20240226_091814266.jpg', 
+      '/events/gallery/sw2/PXL_20240226_092040330.PORTRAIT.ORIGINAL.jpg', 
+      '/events/gallery/sw2/PXL_20240226_103224247.jpg', 
+      '/events/gallery/sw2/PXL_20240227_083032522.jpg', 
+      '/events/gallery/sw2/PXL_20240227_095017989.jpg', 
       '/events/gallery/sw2/PXL_20240228_112637971 (1).jpg'
-    ],
+    ]
   },
   {
     coverImage: "/events/sw1.jpeg",
@@ -74,7 +79,7 @@ const events: Event[] = [
       '/events/gallery/Altium/GKVK9250.JPG',
       '/events/gallery/Altium/IMG-20240906-WA0013.jpg',
       '/events/gallery/Altium/IMG-20240906-WA0014.jpg',
-      '/events/gallery/Altium/IMG-20240906-WA0021.jpg'
+      '/events/gallery/Altium/IMG-20240906-WA0021.jpg',
     ]
 
   }
