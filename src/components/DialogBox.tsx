@@ -86,7 +86,7 @@ export default function DialogBox({
           </button>
         </div>
         {isImageOpen && (
-          <div className="image-box bg-black/50 backdrop-blur-xl rounded-xl p-2 w-full h-full lg:w-fit lg:h-fit">
+          <div className="image-box bg-black/50 backdrop-blur-xl rounded-xl p-2 w-full h-full lg:w-fit lg:h-fit hidden lg:block">
           <div className="grid place-items-end w-full">
             <button
               className="bg-red p-2 rounded-lg"
@@ -104,7 +104,7 @@ export default function DialogBox({
               width={1200}
               height={1200}
               loader={() => imgLoader(isImageOpen)}
-              className="rounded-lg w-full h-full lg:max-h-[128vh] max-h-screen object-contain"
+              className="rounded-lg w-full h-full lg:max-h-[80vh] max-h-screen object-contain"
             />
           </div>
         </div>
