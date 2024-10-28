@@ -64,8 +64,8 @@ export default function DialogBox({
                 style={{ width: "100%", display: "block" }}
                 alt=""
                 className="rounded-lg"
-                width={2400}
-                height={2400}
+                width={1200}
+                height={1200}
                 loader={() => imgLoader(image)}
               />
             ))}
