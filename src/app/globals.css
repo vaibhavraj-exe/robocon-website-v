@@ -30,7 +30,6 @@
   background: red;
 }
 
-
 /* Scroll Bar */
 :root {
   --primary: #000000;
@@ -63,3 +62,70 @@
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--tertiary);
 }
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+.image-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 1200;
+  transform: translate(-50%, -50%);
+}
+
+.dialog-box {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(128, 0, 0, 0.8);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+
+.carousel::-webkit-scrollbar-track {
+  background: var(--primary);
+  border-radius: 5px;
+}
+
+.carousel::-webkit-scrollbar-thumb {
+  background-color: red;
+  border-radius: 14px;
+  border: 3px solid var(--primary);
+}
+
+.carousel::-webkit-scrollbar-thumb:hover {
+  background-color: darkred;
+}
+
+/* Firefox */
+.carousel {
+  scrollbar-width: auto;
+  scrollbar-color: red var(--primary);
+}
+
+@keyframes bounce-left-right {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-30%);
+  }
+}
+
+.carousel-element {
+  animation: bounce-left-right 1s;
+  animation-delay: 2s;
+}
+
+
