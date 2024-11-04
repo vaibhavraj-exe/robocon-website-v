@@ -2,16 +2,15 @@
 import { Event } from "@/constants/types";
 import DialogBox from "./DialogBox";
 import { useEffect, useState } from "react";
-import { events } from "@/constants/constants";
 
-export default function Carousel() {
+export default function Carousel({ data }: {data: Event[]}) {
   const [isOpen, open] = useState<Event | null>(null);
   useEffect(() => {
     console.log(isOpen);
   }, [isOpen]);
   return (
     <div className="w-full lg:w-5/6 h-full flex gap-2 overflow-y-scroll rounded-lg snap-mandatory snap-x carousel">
-      {events.map((event: Event, index: number) => {
+      {data.map((event: Event, index: number) => {
         return (
           <>
             <button
