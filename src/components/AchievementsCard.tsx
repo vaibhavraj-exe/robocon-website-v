@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function Achievements(achievement: {
+export default  function Achievement(achievement: {
     imageSrc: string;
     altText: string;
     description: string;
@@ -21,3 +21,4 @@ export default function Achievements(achievement: {
         </div>
     )
 }
+

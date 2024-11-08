@@ -1,33 +1,44 @@
 "use client";
-import { Event } from "@/constants/types";
+import { Event, Project } from "@/constants/types";
 import DialogBox from "./DialogBox";
 import { useEffect, useState } from "react";
 
-export default function Carousel({ data }: {data: Event[]}) {
+
+
+export default function Carousel({ data }: {data: Project[]}) {
   const [isOpen, open] = useState<Event | null>(null);
   useEffect(() => {
     console.log(isOpen);
   }, [isOpen]);
   return (
-    <div className="w-full lg:w-5/6 h-full flex gap-2 overflow-y-scroll rounded-lg snap-mandatory snap-x carousel">
-      {data.map((event: Event, index: number) => {
+    <div className="w-full lg:w-5/6 h-full flex gap-2 overflow-x-scroll rounded-lg snap-mandatory snap-x carousel">
+      {data.map((project: Project, index: number) => {
         return (
           <>
             <button
               key={index}
               className="h-full"
               onClick={() => {
-                open(isOpen ? null : event);
+                open(isOpen ? null : project);
               }}
             >
               <div
-                className="w-[350px] h-[500px] bg-cover bg-center rounded-lg  duration-500 carousel-element snap-center"
-                style={{ backgroundImage: `url(${event.coverImage})` }}
+                className="w-full h-[500px] bg-cover bg-center rounded-lg  duration-500 carousel-element snap-center "
+                style={{ backgroundImage: `url(${project.coverImage})`,
+                height:`500px`,
+                width:`${500*(project.dimensions.width/project.dimensions.height)}px`,
+                
+                
+                
+              }
+                
+              }
               >
                 <div className="bg-black opacity-0 hover:opacity-70 w-full h-full flex items-center justify-center rounded-lg duration-500">
                   <div>
-                    <h2 className="text-white text-xl">{event.name}</h2>
-                    {/* <p className="text-white text-sm">{event.abstract}</p> */}
+                    <h2 className="text-white text-xl">{project.name}</h2>
+                    <p className="text-white text-sm">{project.abstract.split(" ").slice(0, 15).join(" ") + (project.abstract.split(" ").length > 15 ? "..." : "")}
+                    </p>
                   </div>
                 </div>
               </div>

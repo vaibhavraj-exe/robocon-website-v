@@ -2,7 +2,7 @@
 
 import React from "react";
 import Header from "@/components/Header";
-import Carousel from "@/components/Carousel";
+import Carousel from "@/components/ProjectCarousel";
 import Footer from "@/components/Footer";
 import { projects } from "@/constants/constants";
 
