@@ -1,4 +1,4 @@
-import { Event , Project } from "./types";
+import { Event , Project , Achievement } from "./types";
 
 
 
@@ -64,7 +64,7 @@ export const achievements = [
   },
 ];
 
-export const events = [
+export const events:Event[] = [
   {
     coverImage: "/events/ARC.JPG",
     name: "Automation and Robotics Challenge(ARC) '24",
@@ -145,103 +145,135 @@ export const events = [
   },
 ];
 
-export const achievements1: Event[] = [
+export const achievements1: Achievement[] = [
   {
-    name:`Air 9 in DD Robocon 2024`,
-    description:``,
-    coverImage:"/achievements/robo.jpg",
-    abstract:`In 2024, SRM Team Robocon achieved AIR 9 out of over 110 teams from all over India, and in 2023, we placed 11th out of over 100 teams that competed in the DD Robocon`,
-    gallery:['/achievements/robo.jpg'],
+    "name":'Air 9 in DD Robocon 2024',
+    "description":'',
+    "coverImage":"/achievements/robo.jpg",
+    "abstract":'In 2024, SRM Team Robocon achieved AIR 9 out of over 110 teams from all over India, and in 2023, we placed 11th out of over 100 teams that competed in the DD Robocon',
+    "gallery":['/achievements/robo.jpg'],
+    dimensions1:{
+      'height': 571, 'width': 571
+    }
     
     
   },
   {
-    name:`AutoDesk Fusion Digital Design award`,
-    description:``,
-    coverImage:"/achievements/Fusion2.png",
-    abstract:`The team was granted the AutoDesk Fusion Digital Design Award in the Best Fabricator Award category in 2024, which included a cash prize of Rs. 25,000, respectively.`,
-    gallery:[],
+    "name":'AutoDesk Fusion Digital Design award',
+    "description":'',
+    "coverImage":"/achievements/Fusion2.png",
+    "abstract":'The team was granted the AutoDesk Fusion Digital Design Award in the Best Fabricator Award category in 2024, which included a cash prize of Rs. 25,000, respectively.',
+    "gallery":[],
+    dimensions1:{
+      'height': 706, 'width': 926
+    }
     
     
   },
   {
-    name:`Winners at Healthathon SRMIST 2024`,
-    description:``,
-    coverImage:"",
-    abstract:`The SRM Team Robocon was honored to be the winners of Round 1, the runner-up of Round 2, and the winners of Round 3 in the inaugural edition of the 'Healthathon', which was organized by the Department of Biomedical Engineering at SRMIST, Chennai. The team received a total cash prize of Rs 11,500. `,
-    gallery:[],
+    "name":'Winners at Healthathon SRMIST 2024',
+    "description":'',
+    "coverImage":"/achievements/Healthathon.jpg",
+    "abstract":"The SRM Team Robocon was honored to be the winners of Round 1, the runner-up of Round 2, and the winners of Round 3 in the inaugural edition of the 'Healthathon', which was organized by the Department of Biomedical Engineering at SRMIST, Chennai. The team received a total cash prize of Rs 11,500. ",
+    "gallery":[],
+    dimensions1:{
+       'height':2252 , 'width':4000
+    }
    
     
   },
   {
-    name:`Fusion 360 best user experience award 2023`,
-    description:``,
-    coverImage:"/achievements/fusion.png",
-    abstract:`With a cash prize of Rs 10,000, our team was granted the Fusion 360 Best User Experience Award in 2023.`,
-    gallery:[],
+    "name":'Fusion 360 best user experience award 2023',
+    "description":'',
+    "coverImage":"/achievements/fusion.png",
+    "abstract":'With a cash prize of Rs 10,000, our team was granted the Fusion 360 Best User Experience Award in 2023.',
+    "gallery":[],
+    dimensions1:{
+      'height': 256, 'width': 256
+    }
     
     
   },
   {
-    name:`Qualification for SIH 2023`,
-    description:``,
-    coverImage:"/achievements/SIH.png",
-    abstract:`The internal SIH (Smart India Hackathon) 2023 saw the qualification of three teams from SRM Team Robocon, which were led by our club members.`,
-    gallery:[],
+    "name":'Qualification for SIH 2023',
+    "description":'',
+    "coverImage":"/achievements/SIH.png",
+    "abstract":'The internal SIH (Smart India Hackathon) 2023 saw the qualification of three teams from SRM Team Robocon, which were led by our club members.',
+    "gallery":[],
+    dimensions1:{
+      'height': 309, 'width': 299
+    }
    
     
   },
   {
-    name:`NewGen IEDC SRM Grant at IDEX hackathon 2022`,
-    description:``,
-    coverImage:"/projects/IDEX.png",
-    abstract:`The NewGen IEDC SRM Grant of Rs 1 lakh was awarded to our team at the IDEX hackathon in 2022.`,
-    gallery:[],
+    "name":'NewGen IEDC SRM Grant at IDEX hackathon 2022',
+    "description":'',
+    "coverImage":"/projects/IDEX.png",
+    "abstract":'The NewGen IEDC SRM Grant of Rs 1 lakh was awarded to our team at the IDEX hackathon in 2022.',
+    "gallery":[],
+    dimensions1:{
+      'height': 720, 'width': 720
+    }
     
     
   },
   {
-    name:`Winners of BITS quarkline 2022`,
-    description:`New Generation Innovation and Entrepreneurship Development Centre (NewGen IEDC) is the programme launched by National Science and Technology Entrepreneurship Development Board (NSTEDB), Department of Science & Technology (DST), Government of India and implemented by EDII, Ahmedabad. It is a financial assistance to the selected institutions for establishment of NewGen IEDC, towards its non-recurring (as one time establishment cost) of upto Rs. 25 Lakhs and recurring expenditure (Project Development Cost, Travel, Training and Contingencies, etc.) of up to Rs. 10 lakhs for five full operational years would be provided. SRM TEAM Robocon was privileged to be presented with this prestigious grant by our SRMIST and Govt. Of India.SRM TEAM Robocon was graced by the auspicious presence the Vice president of Altium Education Global and the  Manager of University  relations Alitum Lab, our  teams proud sponsor for this session`,
-    coverImage:"/achievements/BITS.png",
-    abstract:`In 2022, our members took part in the BITS Quark Line Follower Competition and achieved first place, earning a cash prize of Rs 30,000.`,
-    gallery:[],
-   
+    "name":'Winners of BITS quarkline 2022',
+    "description":'New Generation Innovation and Entrepreneurship Development Centre (NewGen IEDC) is the programme launched by National Science and Technology Entrepreneurship Development Board (NSTEDB), Department of Science & Technology (DST), Government of India and implemented by EDII, Ahmedabad. It is a financial assistance to the selected institutions for establishment of NewGen IEDC, towards its non-recurring (as one time establishment cost) of upto Rs. 25 Lakhs and recurring expenditure (Project Development Cost, Travel, Training and Contingencies, etc.) of up to Rs. 10 lakhs for five full operational years would be provided. SRM TEAM Robocon was privileged to be presented with this prestigious grant by our SRMIST and Govt. Of India.SRM TEAM Robocon was graced by the auspicious presence the Vice president of Altium Education Global and the  Manager of University  relations Alitum Lab, our  teams proud sponsor for this session',
+    "coverImage":"/achievements/BITS.png",
+    "abstract":'In 2022, our members took part in the BITS Quark Line Follower Competition and achieved first place, earning a cash prize of Rs 30,000.',
+    "gallery":[],
+     dimensions1:{
+      'height': 571, 'width': 571
+     }
     
   },
   {
-    name:`Winners of Advaya Hacks 2022`,
-    description:``,
-    coverImage:"/achievements/Adavya.png",
-    abstract:`Gained victory in the 2022 Advaya Hacks Event, which was organized by the IGDTU ACM Student Chapter`,
-    gallery:[],
-    
-    
-  },
-  {
-    name:`IIITD innovation contest 2022`,
-    description:``,
-    coverImage:"/achievements/IIITD.png",
-    abstract:`SRM Team Robocon was honored as one of the top ten finalists in the IIIT-Delhi Innovation Contest., 2022.`,
-    gallery:[],
+    "name":'Winners of Advaya Hacks 2022',
+    "description":'',
+    "coverImage":"/achievements/Advaya.png",
+    "abstract":'Gained victory in the 2022 Advaya Hacks Event, which was organized by the IGDTU ACM Student Chapter',
+    "gallery":[],
+    dimensions1:{
+      'height': 200, 'width': 200
+    }
     
     
   },
   {
-    name:`Tide 2.0 Innovation contest IIMU`,
-    description:``,
-    coverImage:"/achievements/IIMU.png",
-    abstract:`The Tide 2.0 Innovation Contest, which was conducted by IIM Udaipur, recognized us as one of the top ten teams in the year 2022.`,
-    gallery:[],
+    "name":'IIITD innovation contest 2022',
+    "description":'',
+    "coverImage":"/achievements/IIITD.png",
+    "abstract":'SRM Team Robocon was honored as one of the top ten finalists in the IIIT-Delhi Innovation Contest., 2022.',
+    "gallery":[],
+    dimensions1:{
+      'height': 225, 'width': 225
+    }
     
     
   },
   {
-    name:`DD robocon 2014`,
-    description:``,
-    coverImage:"/achievements/images.jpeg",
-    abstract:`DD Robocon designated the 'Most Economical Bot' to SRM Team Robocon's bot for the 2014 problem statement.`,
-    gallery:[],
+    "name":'Tide 2.0 Innovation contest IIMU',
+    "description":'',
+    "coverImage":"/achievements/IIMU.png",
+    "abstract":'The Tide 2.0 Innovation Contest, which was conducted by IIM Udaipur, recognized us as one of the top ten teams in the year 2022.',
+    "gallery":[],
+    dimensions1:{
+      'height': 225, 'width': 225
+    }
+    
+    
+  },
+  {
+    "name":'DD robocon 2014',
+    "description":'',
+    "coverImage":"/achievements/Robocon2024.jpeg",
+    "abstract":"DD Robocon designated the Most Economical Bot to SRM Team Robocon's bot for the 2014 problem statement.",
+    "gallery":[],
+    dimensions1:{
+      'height': 150, 'width':342
+    }
     
     
   }

@@ -42,6 +42,7 @@ export default function Carousel({ data }: {data: Event[]}) {
                 abstract={isOpen.abstract}
                 gallery={isOpen.gallery}
                 setOpen={open}
+               
                 
                 isOpen={isOpen !== null}
               />

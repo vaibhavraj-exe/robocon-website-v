@@ -2,7 +2,7 @@
 
 import React from "react";
 import Header from "@/components/Header";
-import Carousel from "@/components/EventCarousel";
+import Carousel from "@/components/AchievementsCarousel";
 import Footer from "@/components/Footer";
 import { achievements1 } from "@/constants/constants";
 
