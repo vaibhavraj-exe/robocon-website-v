@@ -1,4 +1,4 @@
-import { Event,Project } from "@/constants/types";
+import { Event, Project } from "@/constants/types";
 import Image from "next/image";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import AOS from "aos";
@@ -55,8 +55,8 @@ export default function DialogBox({
         <div>
           <p className="p-2 text-justify">{description}</p>
         </div>
-        {gallery.length < 3 ? (
-          <div className="grid place-items-center grid-cols-2 gap-2">
+        <ResponsiveMasonry columnsCountBreakPoints={{ 400: 1, 500: 2, 600: 3 }} className="md:mx-10">
+          <Masonry gutter="7px">
             {gallery.map((image, i) => {
               return (
                 <Image
@@ -71,25 +71,8 @@ export default function DialogBox({
                 />
               )
             })}
-          </div>
-        ) : (
-          <ResponsiveMasonry columnsCountBreakPoints={{ 400: 1, 500: 2, 600: 3 }} className="md:mx-10">
-            <Masonry gutter="7px">
-              {gallery.map((image, i) => (
-                <Image
-                  key={i}
-                  src={image}
-                  style={{ width: "100%", display: "block" }}
-                  alt=""
-                  className="rounded-lg"
-                  width={1200}
-                  height={1200}
-                  loader={() => imgLoader(image)}
-                />
-              ))}
-            </Masonry>
-          </ResponsiveMasonry>)
-        }
+          </Masonry>
+        </ResponsiveMasonry>
         <div className="py-4 grid place-items-center">
           <button className="close-button bg-red p-2 rounded-lg w-1/4"
             onClick={() => {

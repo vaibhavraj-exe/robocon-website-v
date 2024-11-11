@@ -14,7 +14,7 @@ export default function Carousel({ data }: {data: Project[]}) {
     <div className="w-full lg:w-5/6 h-full flex gap-2 overflow-x-scroll rounded-lg snap-mandatory snap-x carousel">
       {data.map((project: Project, index: number) => {
         return (
-          <>
+          <div key={index}>
             <button
               key={index}
               className="h-full"
@@ -55,7 +55,7 @@ export default function Carousel({ data }: {data: Project[]}) {
                 isOpen={isOpen !== null}
               />
             )}
-          </>
+          </div>
         );
       })}
     </div>

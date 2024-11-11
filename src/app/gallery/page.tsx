@@ -8,8 +8,8 @@ import photoNames from "../../../public/gallery/photoData";
 import AOS from "aos";
 import { useEffect } from "react";
 
-const imgLoader = (src:string) => {
-    return `/gallery/photos/${src}`
+const imgLoader = (src: string) => {
+  return `/gallery/photos/${src}`
 }
 
 export default function Gallery() {
@@ -19,7 +19,7 @@ export default function Gallery() {
       once: false,
     });
   }, []);
-  
+
   return (
     <div>
       <Header />
@@ -41,9 +41,10 @@ export default function Gallery() {
               />
             ))}
           </Masonry>
+
         </ResponsiveMasonry>
       </section>
       <Footer />
-    </div>
+    </div >
   );
 }
