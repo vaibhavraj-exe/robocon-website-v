@@ -7,7 +7,7 @@ import Menu3FillIcon from "remixicon-react/Menu3FillIcon";
 import AOS from "aos";
 import { useRouter } from "next/navigation";
 import { useMenuContext } from "@/context/MenuContext";
-// import ParticlesCom from "./ParticlesCom";
+import ParticlesCom from "./Particles";
 
 export default function Header() {
   const { isMenuOpen, setMenuValue } = useMenuContext();
@@ -30,7 +30,7 @@ export default function Header() {
   return (
     <div>
       <div>
-        {/* <ParticlesCom /> */}
+        <ParticlesCom />
       </div>
       {/* Header section */}
       <div className="mt-12 md:mt-16 pl-10 md:pl-16 flex justify-between w-full">
@@ -40,7 +40,7 @@ export default function Header() {
           alt="logo"
           width={210}
           height={200}
-          className="w-44 md:w-52 cursor-pointer"
+          className="w-44 md:w-52 cursor-pointer z-50"
           onClick={() => router.push("/")}
           unoptimized
         ></Image>
