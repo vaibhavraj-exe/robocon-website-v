@@ -29,7 +29,7 @@ export default function Header() {
   const router = useRouter();
   return (
     <div>
-      <div>
+      <div className="-z-50">
         <ParticlesCom />
       </div>
       {/* Header section */}
@@ -64,9 +64,15 @@ export default function Header() {
           </button>
           <button
             className="px-5 hover:text-red hover:scale-105"
-            onClick={() => router.push("/projectsAndAchievements")}
+            onClick={() => router.push("/projects")}
           >
-            Projects & Achievements
+            Projects
+          </button>
+          <button
+            className="px-5 hover:text-red hover:scale-105"
+            onClick={() => router.push("/achievements")}
+          >
+            Achievements
           </button>
           <button
             className="px-5 hover:text-red hover:scale-105"
@@ -147,9 +153,15 @@ export default function Header() {
           </button>
           <button
             className="px-8 hover:text-black hover:scale-105"
-            onClick={() => router.push("/projectsAndAchievements")}
+            onClick={() => router.push("/projects")}
           >
-            Projects & Achievements
+            Projects
+          </button>
+          <button
+            className="px-8 hover:text-black hover:scale-105"
+            onClick={() => router.push("/achievements")}
+          >
+            Achievements
           </button>
           <button
             className="px-8 hover:text-black hover:scale-105"

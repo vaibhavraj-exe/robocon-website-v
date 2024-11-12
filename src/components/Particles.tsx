@@ -1,40 +1,28 @@
-import { useEffect, useMemo, useState } from "react";
-import Particles, { initParticlesEngine } from "@tsparticles/react";
-import {
-  type Container,
-  type ISourceOptions,
-  MoveDirection,
-  OutMode,
-} from "@tsparticles/engine";
-// import { loadAll } from "@tsparticles/all"; // if you are going to use `loadAll`, install the "@tsparticles/all" package too.
-// import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
-import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
-// import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
+import React, { useCallback } from "react";
+import Particles from "react-tsparticles";
+import type { Container, Engine } from "tsparticles-engine";
+import { loadFull } from "tsparticles";
 
-const ParticlesCom = () => {
-  const [init, setInit] = useState(false);
+export default function ParticlesCom() {
+  const particlesInit = useCallback(async (engine: Engine) => {
+    console.log(engine);
 
-  // this should be run only once per application lifetime
-  useEffect(() => {
-    initParticlesEngine(async (engine) => {
-      // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
-      // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-      // starting from v2 you can add only the features you need reducing the bundle size
-      //await loadAll(engine);
-      //await loadFull(engine);
-      await loadSlim(engine);
-      //await loadBasic(engine);
-    }).then(() => {
-      setInit(true);
-    });
-  }, []);
+    // you can initialize the tsParticles instance (engine) here, adding custom shapes or presets
+    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+    // starting from v2 you can add only the features you need reducing the bundle size
+    await loadFull(engine);
+}, []);
 
-  const particlesLoaded = async (container?: Container): Promise<void> => {
-    console.log(container);
-  };
-
-  const options: ISourceOptions = useMemo(
-    () => ({
+const particlesLoaded = useCallback(async (container: Container | undefined) => {
+    await console.log(container);
+}, []);
+  return (
+    <Particles
+      className="fixed w-full h-full -z-10"
+      id="tsparticles"
+      init={particlesInit}
+      loaded={particlesLoaded}
+      options={{
         background: {
             color: {
                 value: "#000000",
@@ -51,10 +39,7 @@ const ParticlesCom = () => {
                     enable: true,
                     mode: "repulse",
                 },
-                resize: {
-                    enable: true,
-                    delay: 0.5,
-                },
+                resize: true,
             },
             modes: {
                 push: {
@@ -92,7 +77,8 @@ const ParticlesCom = () => {
                     enable: true,
                     area: 800,
                 },
-                value: 15
+                value: 15,
+                limit: 50
             },
             opacity: {
                 value: 0.5,
@@ -105,21 +91,7 @@ const ParticlesCom = () => {
             },
         },
         detectRetina: true,
-    }),
-    [],
+    }}
+    />
   );
-
-  if (init) {
-    return (
-      <Particles
-        id="tsparticles"
-        particlesLoaded={particlesLoaded}
-        options={options}
-      />
-    );
-  }
-
-  return <></>;
-};
-
-export default ParticlesCom;
+}

@@ -22,9 +22,7 @@ export default function Carousel({ data }: {data: Event[]}) {
             >
               <div
                 className="w-[350px] h-[500px] bg-cover bg-center rounded-lg  duration-500 carousel-element snap-center "
-                style={{ backgroundImage: `url(${event.coverImage})`}
-                
-              }
+                style={{ backgroundImage: `url(${event.coverImage})`}}
               >
                 <div className="bg-black opacity-0 hover:opacity-70 w-full h-full flex items-center justify-center rounded-lg duration-500">
                   <div>

@@ -31,7 +31,6 @@ export default function Gallery() {
               <Image
                 key={i}
                 src={`/gallery/photos/${image}`}
-                loader={() => imgLoader(image)}
                 style={{ width: "100%", display: "block" }}
                 alt=""
                 width={300}
