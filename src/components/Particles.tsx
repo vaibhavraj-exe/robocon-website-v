@@ -51,7 +51,10 @@ const ParticlesCom = () => {
                     enable: true,
                     mode: "repulse",
                 },
-                resize: true,
+                resize: {
+                    enable: true,
+                    delay: 0.5,
+                },
             },
             modes: {
                 push: {
@@ -89,8 +92,7 @@ const ParticlesCom = () => {
                     enable: true,
                     area: 800,
                 },
-                value: 15,
-                limit: 50
+                value: 15
             },
             opacity: {
                 value: 0.5,
