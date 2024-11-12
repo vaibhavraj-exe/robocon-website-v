@@ -7,7 +7,7 @@ import Menu3FillIcon from "remixicon-react/Menu3FillIcon";
 import AOS from "aos";
 import { useRouter } from "next/navigation";
 import { useMenuContext } from "@/context/MenuContext";
-import ParticlesCom from "./ParticlesCom";
+import ParticlesCom from "./Particles";
 
 export default function Header() {
   const { isMenuOpen, setMenuValue } = useMenuContext();
@@ -29,7 +29,7 @@ export default function Header() {
   const router = useRouter();
   return (
     <div>
-      <div>
+      <div className="-z-50">
         <ParticlesCom />
       </div>
       {/* Header section */}
@@ -40,7 +40,7 @@ export default function Header() {
           alt="logo"
           width={210}
           height={200}
-          className="w-44 md:w-52 cursor-pointer"
+          className="w-44 md:w-52 cursor-pointer z-50"
           onClick={() => router.push("/")}
           unoptimized
         ></Image>
@@ -64,9 +64,15 @@ export default function Header() {
           </button>
           <button
             className="px-5 hover:text-red hover:scale-105"
-            onClick={() => router.push("/projectsAndAchievements")}
+            onClick={() => router.push("/projects")}
           >
-            Projects & Achievements
+            Projects
+          </button>
+          <button
+            className="px-5 hover:text-red hover:scale-105"
+            onClick={() => router.push("/achievements")}
+          >
+            Achievements
           </button>
           <button
             className="px-5 hover:text-red hover:scale-105"
@@ -147,9 +153,15 @@ export default function Header() {
           </button>
           <button
             className="px-8 hover:text-black hover:scale-105"
-            onClick={() => router.push("/projectsAndAchievements")}
+            onClick={() => router.push("/projects")}
           >
-            Projects & Achievements
+            Projects
+          </button>
+          <button
+            className="px-8 hover:text-black hover:scale-105"
+            onClick={() => router.push("/achievements")}
+          >
+            Achievements
           </button>
           <button
             className="px-8 hover:text-black hover:scale-105"
