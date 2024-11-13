@@ -80,10 +80,10 @@ export default function Home() {
       {/* Second section */}
       <section className="w-full h-full md:h-screen flex flex-col items-center justify-center mt-20 md:mt-0">
         <div className="flex flex-col items-center" data-aos="fade-up">
-          <div className="flex flex-wrap gap-5 md:gap-0 w-full justify-center">
+          <div className="flex flex-wrap gap-4 md:gap-0 w-full justify-center">
             <CountUpUnit upto={noOfTeamMembers} label="Team Members" />
             <CountUpUnit upto={noOfRobots} label="Robots" />
-            <CountUpUnit upto={noOfParticipations} label="Participations" />
+            <CountUpUnit upto={noOfParticipations} label="Participations / year" />
             <CountUpUnit upto={noOfAlumni} label="Alumni" />
           </div>
           <div className="text-3xl m-12 text-center text-white">
