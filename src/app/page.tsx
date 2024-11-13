@@ -125,9 +125,9 @@ export default function Home() {
         <RoboConEvent />
       </section> */}
 
-      <section>
+      {/* <section>
         <ProjectsDisplay/>
-      </section>
+      </section> */}
 
       {/* Third section */}
       <section className="w-full h-full">
