@@ -11,6 +11,7 @@ export default function Events() {
     <div>
       <Header />
       <div className="grid place-items-center py-8">
+      <h1 style={{color:"white",fontSize:30}}>Events</h1>
         <Carousel data={events}/>
       </div>
       <Footer />

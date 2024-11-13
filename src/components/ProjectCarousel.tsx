@@ -12,17 +12,9 @@ export default function Carousel({ data }: {data: Project[]}) {
   }, [isOpen]);
   return (
     <div className="w-full lg:w-5/6 h-full flex gap-2 overflow-x-scroll rounded-lg snap-mandatory snap-x carousel">
-      <div style={{
-        marginTop:0,
-        marginRight:20
-      }}>
-      <h1 style={{
-          fontSize:30,
-          color:"white"
-          
-        }}>Projects</h1>
+      
 
-      </div>
+      
       {data.map((project: Project, index: number) => {
         return (
           <div key={index}>

@@ -11,16 +11,7 @@ export default function Carousel({ data }: {data: Event[]}) {
   return (
     
     <div className="w-full lg:w-5/6 h-full flex gap-2 overflow-y-scroll rounded-lg snap-mandatory snap-x carousel">
-      <div style={{
-        marginTop:0,
-        marginRight:20
-      }}>
-      <h1 style={{
-          fontSize:30,
-          color:"white"
-        }}>Events</h1>
-
-      </div>
+      
       {data.map((event: Event, index: number) => {
         return (
           <>

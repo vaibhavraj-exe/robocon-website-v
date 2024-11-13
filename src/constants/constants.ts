@@ -174,7 +174,7 @@ export const achievements1: Achievement[] = [
     "description":'',
     "coverImage":"/achievements/Fusion2.png",
     "abstract":'The team was granted the AutoDesk Fusion Digital Design Award in the Best Fabricator Award category in 2024, which included a cash prize of Rs. 25,000, respectively.Autodesk Design & Make Awards (formerly known as Autodesk Excellence Awards) is an annual event honoring an inspiring collection of innovators exploring bold opportunities with technology to transform their industries and make a lasting impact on the world. The team was granted the AutoDesk Fusion Digital Design Award in the Best Fabricator Award category in 2024, which included a cash prize of Rs. 25,000, respectively.',
-    "gallery":[],
+    "gallery":["/achievements/Autodeskfusion/Autodesk1.jpeg","/achievements/Autodeskfusion/Autodesk2.jpeg","/achievements/Autodeskfusion/Autodesk3.jpeg"],
     dimensions1:{
       'height': 706, 'width': 926
     }
@@ -186,7 +186,7 @@ export const achievements1: Achievement[] = [
     "description":'',
     "coverImage":"/achievements/Healthathon.jpg",
     "abstract":"The SRM Team Robocon was honored to be the winners of Round 1, the runner-up of Round 2, and the winners of Round 3 in the inaugural edition of the 'Healthathon', which was organized by the Department of Biomedical Engineering at SRMIST, Chennai. The team received a total cash prize of Rs 11,500. ",
-    "gallery":[],
+    "gallery":[""],
     dimensions1:{
        'height':2252 , 'width':4000
     }
