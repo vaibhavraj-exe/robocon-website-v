@@ -114,18 +114,4 @@
   scrollbar-color: red var(--primary);
 }
 
-@keyframes bounce-left-right {
-  0%, 100% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(-30%);
-  }
-}
-
-.carousel-element {
-  animation: bounce-left-right 1s;
-  animation-delay: 2s;
-}
-
 

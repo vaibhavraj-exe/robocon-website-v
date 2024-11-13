@@ -7,14 +7,14 @@ import { useEffect, useState } from "react";
 
 export default function Carousel({ data }: {data: Project[]}) {
   const [isOpen, open] = useState<Project | null>(null);
+  const isPhone = () => {
+    return window.innerWidth <= 768;
+  };
   useEffect(() => {
     console.log(isOpen);
   }, [isOpen]);
   return (
     <div className="w-full lg:w-5/6 h-full flex gap-2 overflow-x-scroll rounded-lg snap-mandatory snap-x carousel">
-      
-
-      
       {data.map((project: Project, index: number) => {
         return (
           <div key={index}>
@@ -27,15 +27,17 @@ export default function Carousel({ data }: {data: Project[]}) {
             >
               <div
                 className="w-full h-[500px] bg-cover bg-center rounded-lg  duration-500 carousel-element snap-center "
-                style={{ backgroundImage: `url(${project.coverImage})`,
-                height:`500px`,
-                width:`${500*(project.dimensions.width/project.dimensions.height)}px`,
-                
-                
-                
-              }
-                
-              }
+                style={
+                  isPhone()
+                    ? {
+                      backgroundImage: `url(${project.coverImage})`,
+                      width: `350px`,
+                      height: `${project.dimensions.height / project.dimensions.width * 350}px`,
+                    } : { backgroundImage: `url(${project.coverImage})`,
+                    height:`500px`,
+                    width:`${500*(project.dimensions.width/project.dimensions.height)}px`,
+                  }
+                }
               >
                 <div className="bg-black opacity-0 hover:opacity-70 w-full h-full flex items-center justify-center rounded-lg duration-500">
                   <div>
