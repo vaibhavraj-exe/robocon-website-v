@@ -24,7 +24,7 @@ export default function DialogBox({
     });
   }, []);
   return (
-    <div className="dialog-box text-white bg-black/50 backdrop-blur-2xl overflow-y-scroll w-full h-full grid place-items-center no-scrollbar">
+    <div className="dialog-box text-white bg-black overflow-y-scroll w-full h-full grid place-items-center no-scrollbar">
       <div className=" no-scrollbar grid gap-2 w-full h-full lg:w-5/6 py-2 px-4 border-y-0 rounded-3xl shadow-red shadow-2xl overflow-y-scroll">
         <div className="grid place-items-end">
           <button className="close-button bg-red p-2 rounded-lg"
