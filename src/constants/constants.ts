@@ -198,7 +198,7 @@ export const achievements1: Achievement[] = [
     "description": '',
     "coverImage": "/achievements/Fusion360/fusion7.jpeg",
     "abstract": 'With a cash prize of Rs 10,000, our team was granted the Fusion 360 Best User Experience Award in 2023.With a cash prize of Rs 10,000, our team was granted the Fusion 360 Best User Experience Award in 2023.These awards honor individuals and organizations that use Autodesk technology to push the boundaries of innovation and create a positive impact on the world.',
-    "gallery": ["/achievements/Fusion360/fusion1.jpeg", "/achievements/Fusion360/fusion2.jpeg", "/achievements/Fusion360/fusion3.jpeg", "/achievements/Fusion360/fusion1.jpeg", "/achievements/Fusion360/fusion4.jpeg", "/achievements/Fusion360/fusion5.jpeg", "/achievements/Fusion360/fusion6.jpeg", "/achievements/Fusion360/fusion7.jpeg"],
+    "gallery": ["/achievements/Fusion360/fusion1.jpeg", "/achievements/Fusion360/fusion2.jpeg", "/achievements/Fusion360/fusion3.jpeg", "/achievements/Fusion360/fusion1.jpeg", "/achievements/Fusion360/fusion4.jpeg", "/achievements/Fusion360/fusion5.jpeg", "/achievements/Fusion360/fusion6.jpeg", "/achievements/Fusion360/fusion7.jpeg","/achievements/Fusion360/fusion8.jpg"],
     dimensions1: {
       'height': 256, 'width': 256
     }
@@ -257,7 +257,7 @@ export const achievements1: Achievement[] = [
     "description": '',
     "coverImage": "/achievements/IIITD.png",
     "abstract": 'SRM Team Robocon was honored as one of the top ten finalists in the IIIT-Delhi Innovation Contest., 2022.',
-    "gallery": [],
+    "gallery": ["/achievements/IIITD/iiitd2.png","/achievements/IIITD/iiitd.png"],
     dimensions1: {
       'height': 225, 'width': 225
     }
@@ -269,7 +269,7 @@ export const achievements1: Achievement[] = [
     "description": '',
     "coverImage": "/achievements/IIMU.png",
     "abstract": 'The Tide 2.0 Innovation Contest, which was conducted by IIM Udaipur, recognized us as one of the top ten teams in the year 2022.',
-    "gallery": [],
+    "gallery": ["/achievements/IIMU/tide.jpg","/achievements/IIMU/tide2.0.jpg"],
     dimensions1: {
       'height': 225, 'width': 225
     }
