@@ -9,7 +9,7 @@ import { displayPartsToString } from "typescript";
 export default function Carousel({ data }: { data: Achievement[] }) {
   const [isOpen, open] = useState<Achievement | null>(null);
   const isPhone = () => {
-    return window.innerWidth <= 768;
+    return typeof window !== 'undefined' ? window.innerWidth <= 768 : true;
   };
   useEffect(() => {
     console.log(isOpen);

@@ -125,10 +125,6 @@ export default function Home() {
         <RoboConEvent />
       </section> */}
 
-      <section>
-        <ProjectsDisplay/>
-      </section>
-
       {/* Third section */}
       <section className="w-full h-full">
         <div className="text-3xl md:text-4xl pl-10 md:pl-44 mt-44 text-white">

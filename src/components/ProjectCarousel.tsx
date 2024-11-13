@@ -8,13 +8,13 @@ import { useEffect, useState } from "react";
 export default function Carousel({ data }: {data: Project[]}) {
   const [isOpen, open] = useState<Project | null>(null);
   const isPhone = () => {
-    return window.innerWidth <= 768;
+    return typeof window !== 'undefined' ? window.innerWidth <= 768 : true;
   };
   useEffect(() => {
     console.log(isOpen);
   }, [isOpen]);
   return (
-    <div className="w-full lg:w-5/6 h-full flex gap-2 overflow-x-scroll rounded-lg snap-mandatory snap-x carousel">
+    <div className="w-full lg:w-5/6 h-full grid lg:flex gap-2 overflow-x-scroll text-white rounded-lg snap-mandatory snap-x carousel place-items-center">
       {data.map((project: Project, index: number) => {
         return (
           <div key={index}>
