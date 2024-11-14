@@ -29,7 +29,7 @@ export default function Carousel({ data }: { data: Project[] }) {
             onMouseLeave={() => setHoveredIndex(null)}
           >
             <div
-              className={`w-full bg-cover bg-center rounded-lg transition-transform  ease-in-out carousel-element snap-center ${
+              className={`w-full bg-cover bg-center rounded-lg transition-transform duration-300 ease-in-out carousel-element snap-center ${
                 isPhone ? "h-auto" : "h-[500px]"
               }`}
               style={{
