@@ -2,18 +2,23 @@
 import { Achievement } from "@/constants/types";
 import DialogBox from "./DialogBox-achievements";
 import { useEffect, useState } from "react";
-import { displayPartsToString } from "typescript";
 
 
 
 export default function Carousel({ data }: { data: Achievement[] }) {
   const [isOpen, open] = useState<Achievement | null>(null);
-  const isPhone = () => {
-    return typeof window !== 'undefined' ? window.innerWidth <= 768 : true;
-  };
+  const [isPhone, setIsPhone] = useState<boolean>(false);
+
+    
+  
   useEffect(() => {
     console.log(isOpen);
   }, [isOpen]); 
+
+  useEffect(() => {
+    setIsPhone(window.innerWidth <= 768);
+    console.log(isPhone);
+  }, []);
   return (
     <div className="w-full lg:w-5/6 h-full grid lg:flex gap-2 overflow-x-scroll text-white rounded-lg snap-mandatory snap-x carousel place-items-center"> 
       {data.map((achievements: Achievement, index: number) => {
@@ -29,7 +34,7 @@ export default function Carousel({ data }: { data: Achievement[] }) {
               <div
                 className="w-full  bg-cover bg-center rounded-lg  duration-500 carousel-element snap-center "
                 style={
-                  isPhone()
+                  isPhone
                     ? {
                       backgroundImage: `url(${achievements.coverImage})`,
                       width: `350px`,
