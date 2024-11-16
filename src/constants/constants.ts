@@ -42,7 +42,7 @@ export const achievements = [
     imageSrc: "/achievements/robo.jpg",
     altText: "Project data image",
     description:
-      "Team Robocon’s Bot for the problem statement of 2014 was awarded the 'Most Economical Bot' by DD Robocon.",
+      "Team Robocon's Bot for the problem statement of 2014 was awarded the 'Most Economical Bot' by DD Robocon.",
   },
   {
     imageSrc: "/achievements/Advaya.png",
@@ -81,6 +81,10 @@ export const events: Event[] = [
       "/events/gallery/ARC/IMG_6579.jpg",
       "/events/gallery/ARC/IMG_5575.jpg",
     ],
+    dimensions: {
+      height: 1600,
+      width: 1131
+    }
   },
   {
     coverImage: "/events/sw2.png",
@@ -102,6 +106,10 @@ export const events: Event[] = [
       "/events/gallery/sw2/PXL_20240227_095017989.jpg",
       "/events/gallery/sw2/PXL_20240228_112637971 (1).jpg",
     ],
+    dimensions: {
+      height: 3508,
+      width: 2481
+    }
   },
   {
     coverImage: "/events/sw1.jpeg",
@@ -119,6 +127,10 @@ export const events: Event[] = [
       "/events/gallery/sw1/IMG_20230424_191956_267.jpg",
       "/events/gallery/sw1/IMG-20230424-WA0018.jpg",
     ],
+    dimensions: {
+      height: 1080,
+      width: 1080
+    }
   },
   {
     coverImage: "/events/gallery/Altium/GKVK9246.JPG",
@@ -142,6 +154,10 @@ export const events: Event[] = [
       "/events/gallery/Altium/IMG-20240906-WA0014.jpg",
       "/events/gallery/Altium/IMG-20240906-WA0021.jpg",
     ],
+    dimensions: {
+      height: 3648,
+      width: 3963
+    }
   },
 ];
 
