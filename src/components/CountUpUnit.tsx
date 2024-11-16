@@ -17,7 +17,7 @@ export default function CountUpUnit({upto, label}: CountUpUnitPropsType) {
           <CountUp end={upto} duration={2} enableScrollSpy />
           <div className="text-red">+</div>
         </div>
-        <div className="w-20 text-center">{label}</div>
+        <div className="w-full text-wrap text-center">{label}</div>
       </div>
     </div>
   );

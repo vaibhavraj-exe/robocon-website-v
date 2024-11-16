@@ -6,6 +6,10 @@ export interface Event {
   abstract: string;
   description: string;
   gallery: string[];
+  dimensions: {
+    height: number,
+    width: number
+  }
   
 }
 
@@ -19,6 +23,7 @@ export interface Project {
     height: number,
     width: number
   }
+  shortkey:string;
 }
 
 export interface Achievement {
