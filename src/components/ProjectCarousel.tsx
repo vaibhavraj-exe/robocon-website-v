@@ -46,8 +46,7 @@ export default function Carousel({ data }: {data: Project[]}) {
                 <div className="bg-black opacity-0 hover:opacity-70 w-full h-full flex items-center justify-center rounded-lg duration-500">
                   <div>
                     <h2 className="text-white text-xl">{project.name}</h2>
-                    <p className="text-white text-sm">{project.shortkey.split(" ")}
-                    </p>
+                    <p className="text-white text-sm pe-0 ps-0">{project.shortkey}</p>
                   </div>
                 </div>
               </div>
