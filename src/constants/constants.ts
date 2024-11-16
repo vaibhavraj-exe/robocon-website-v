@@ -300,7 +300,7 @@ export const achievements1: Achievement[] = [
     "abstract": 'SRM Team Robocons bot was awarded the Most Economical Bot designation in the 2014 DD Robocon competition. The 2014 DD Robocon competition had the theme "A Salute to Parenthood". The problem statement revolved around creating two robots: a Parent robot and a Child robot. This recognition highlights our teams ability to develop cost-effective and efficient robotic solutions.',
     "gallery": [],
     dimensions1: {
-      'height': 800, 'width': 588
+      'height': 150, 'width': 460
     }
   }
 
