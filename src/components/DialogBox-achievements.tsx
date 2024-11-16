@@ -44,16 +44,16 @@ export default function DialogBox({
           <h2 className="text-2xl p-2 font-bold underline">{name}</h2>
         </div>
         <div className="grid place-items-center gap-2 lg:flex">
-          <div className="grid place-items-center h-96">
+          <div className="grid place-items-center">
             <Image
               src={coverImage}
               alt={name}
               width={dimensions1.width * (isPhone ? 350 / dimensions1.width : 500 / dimensions1.width)}
               height={dimensions1.height * (isPhone ? 350 / dimensions1.width : 500 / dimensions1.width)}
-              className="rounded-xl h-96 hover:scale-105 duration-500"
+              className="rounded-xl hover:scale-105 duration-500"
             />
           </div>
-          <div className="bg-red rounded-lg p-4 w-fit h-96 overflow-y-auto grid place-items-center">
+          <div className="bg-red rounded-lg p-4 w-fit overflow-y-auto grid place-items-center">
             <p className="text-justify">{abstract}</p>
           </div>
         </div>
