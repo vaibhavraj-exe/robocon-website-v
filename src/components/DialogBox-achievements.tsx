@@ -48,7 +48,7 @@ export default function DialogBox({
               className="rounded-xl h-96 hover:scale-105 duration-500"
             />
           </div>
-          <div className="bg-red rounded-lg p-4 w-fit h-96 overflow-y-auto grid place-items-center">
+          <div className="bg-red rounded-lg p-4 w-full h-96 overflow-y-auto grid place-items-center">
             <p className="text-justify">{abstract}</p>
           </div>
         </div>
