@@ -30,6 +30,7 @@
     "react-slick": "^0.30.2",
     "react-tsparticles": "^2.12.2",
     "remixicon-react": "^1.0.0",
+    "robon-website": "file:",
     "sharp": "^0.33.5",
     "slick-carousel": "^1.8.1",
     "swiper": "^11.1.14",
