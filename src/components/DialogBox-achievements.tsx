@@ -15,14 +15,19 @@ export default function DialogBox({
   abstract,
   gallery,
   setOpen,
+  dimensions1,
   isOpen
 }: Achievement & { setOpen: (isOpen: Achievement | null) => void; isOpen: boolean }) {
+  const [isPhone, setPhone] = useState<boolean>(false);
   useEffect(() => {
     AOS.init({
       duration: 150,
       once: false,
     });
   }, []);
+  useEffect(() => {
+    setPhone(window.innerWidth <= 768);
+  })
   return (
     <div className="dialog-box text-white bg-black overflow-y-scroll w-full h-full grid place-items-center no-scrollbar">
       <div className=" no-scrollbar grid gap-2 w-full h-full lg:w-5/6 py-2 px-4 border-y-0 rounded-3xl shadow-red shadow-2xl overflow-y-scroll">
@@ -43,8 +48,8 @@ export default function DialogBox({
             <Image
               src={coverImage}
               alt={name}
-              width={500}
-              height={400}
+              width={dimensions1.width * (isPhone ? 350 / dimensions1.width : 500 / dimensions1.width)}
+              height={dimensions1.height * (isPhone ? 350 / dimensions1.width : 500 / dimensions1.width)}
               className="rounded-xl h-96 hover:scale-105 duration-500"
             />
           </div>
