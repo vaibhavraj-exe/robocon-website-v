@@ -46,7 +46,7 @@ export default function Carousel({ data }: {data: Project[]}) {
                 <div className="bg-black opacity-0 hover:opacity-70 w-full h-full flex items-center justify-center rounded-lg duration-500">
                   <div>
                     <h2 className="text-white text-xl">{project.name}</h2>
-                    <p className="text-white text-sm">{project.abstract.split(" ").slice(0, 15).join(" ") + (project.abstract.split(" ").length > 15 ? "..." : "")}
+                    <p className="text-white text-sm">{project.shortkey.split(" ")}
                     </p>
                   </div>
                 </div>
@@ -61,6 +61,7 @@ export default function Carousel({ data }: {data: Project[]}) {
                 gallery={isOpen.gallery}
                 setOpen={open}
                 dimensions={isOpen.dimensions}
+                shortkey={isOpen.shortkey}
                 isOpen={isOpen !== null}
               />
             )}

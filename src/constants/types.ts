@@ -23,6 +23,7 @@ export interface Project {
     height: number,
     width: number
   }
+  shortkey:string;
 }
 
 export interface Achievement {
