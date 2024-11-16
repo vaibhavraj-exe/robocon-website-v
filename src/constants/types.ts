@@ -6,6 +6,10 @@ export interface Event {
   abstract: string;
   description: string;
   gallery: string[];
+  dimensions: {
+    height: number,
+    width: number
+  }
   
 }
 
