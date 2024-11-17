@@ -3,8 +3,11 @@ import { Project } from "@/constants/types";
 import DialogBox from "./DialogBox-projects";
 import { useEffect, useState } from "react";
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 91aa9a5477b82f803955a071007d9a20b8e13081
 export default function Carousel({ data }: { data: Project[] }) {
   const [isOpen, open] = useState<Project | null>(null);
   const [isPhone, setIsPhone] = useState<boolean>(false);
@@ -34,6 +37,7 @@ export default function Carousel({ data }: { data: Project[] }) {
                 style={
                   isPhone
                     ? {
+<<<<<<< HEAD
                       backgroundImage: `url(${project.coverImage})`,
                       width: `350px`,
                       height: `${project.dimensions.height / project.dimensions.width * 350}px`,
@@ -42,17 +46,40 @@ export default function Carousel({ data }: { data: Project[] }) {
                       height: `500px`,
                       width: `${500 * (project.dimensions.width / project.dimensions.height)}px`,
                     }
+=======
+                        backgroundImage: `url(${project.coverImage})`,
+                        width: `350px`,
+                        height: `${
+                          (project.dimensions.height /
+                            project.dimensions.width) *
+                          350
+                        }px`,
+                      }
+                    : {
+                        backgroundImage: `url(${project.coverImage})`,
+                        height: `500px`,
+                        width: `${
+                          500 *
+                          (project.dimensions.width / project.dimensions.height)
+                        }px`,
+                      }
+>>>>>>> 91aa9a5477b82f803955a071007d9a20b8e13081
                 }
               >
                 <div className="bg-black opacity-0 hover:opacity-70 w-full h-full flex items-center justify-center rounded-lg duration-500">
                   <div>
                     <h2 className="text-white text-xl">{project.name}</h2>
-                    <p className="text-white text-sm pe-0 ps-0">{project.shortkey}</p>
+                    <p className="text-white text-sm pe-0 ps-0">
+                      {project.shortkey}
+                    </p>
                   </div>
                 </div>
               </div>
             </button>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 91aa9a5477b82f803955a071007d9a20b8e13081
           </div>
         );
       })}
