@@ -1,11 +1,11 @@
 "use client";
-import {  Project } from "@/constants/types";
+import { Project } from "@/constants/types";
 import DialogBox from "./DialogBox-projects";
 import { useEffect, useState } from "react";
 
 
 
-export default function Carousel({ data }: {data: Project[]}) {
+export default function Carousel({ data }: { data: Project[] }) {
   const [isOpen, open] = useState<Project | null>(null);
   const [isPhone, setIsPhone] = useState<boolean>(false);
 
@@ -37,10 +37,11 @@ export default function Carousel({ data }: {data: Project[]}) {
                       backgroundImage: `url(${project.coverImage})`,
                       width: `350px`,
                       height: `${project.dimensions.height / project.dimensions.width * 350}px`,
-                    } : { backgroundImage: `url(${project.coverImage})`,
-                    height:`500px`,
-                    width:`${500*(project.dimensions.width/project.dimensions.height)}px`,
-                  }
+                    } : {
+                      backgroundImage: `url(${project.coverImage})`,
+                      height: `500px`,
+                      width: `${500 * (project.dimensions.width / project.dimensions.height)}px`,
+                    }
                 }
               >
                 <div className="bg-black opacity-0 hover:opacity-70 w-full h-full flex items-center justify-center rounded-lg duration-500">
@@ -51,22 +52,23 @@ export default function Carousel({ data }: {data: Project[]}) {
                 </div>
               </div>
             </button>
-            {isOpen && (
-              <DialogBox
-                name={isOpen.name}
-                coverImage={isOpen.coverImage}
-                description={isOpen.description}
-                abstract={isOpen.abstract}
-                gallery={isOpen.gallery}
-                setOpen={open}
-                dimensions={isOpen.dimensions}
-                shortkey={isOpen.shortkey}
-                isOpen={isOpen !== null}
-              />
-            )}
+
           </div>
         );
       })}
+      {isOpen && (
+        <DialogBox
+          name={isOpen.name}
+          coverImage={isOpen.coverImage}
+          description={isOpen.description}
+          abstract={isOpen.abstract}
+          gallery={isOpen.gallery}
+          setOpen={open}
+          dimensions={isOpen.dimensions}
+          shortkey={isOpen.shortkey}
+          isOpen={isOpen !== null}
+        />
+      )}
     </div>
   );
 }
