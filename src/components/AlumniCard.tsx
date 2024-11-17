@@ -54,7 +54,7 @@ export default function AlumniCard({
             <h1 className="text-xl absolute bottom-2 z-10 w-full bg-black/50 text-white group-hover:hidden text-center">
               {Name} <br />{" "}
               <p className="text-lg">
-                Ex- {Domain} {Designation}
+                {Domain} {Designation}
               </p>{" "}
             </h1>
           </div>
