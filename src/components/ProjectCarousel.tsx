@@ -2,6 +2,7 @@
 import {  Project } from "@/constants/types";
 import DialogBox from "./DialogBox-projects";
 import { useEffect, useState } from "react";
+import DialogBoxEvents from "./DialogBox";
 
 
 
@@ -42,6 +43,8 @@ export default function Carousel({ data }: {data: Project[]}) {
                     width:`${500*(project.dimensions.width/project.dimensions.height)}px`,
                   }
                 }
+
+
               >
                 <div className="bg-black opacity-0 hover:opacity-70 w-full h-full flex items-center justify-center rounded-lg duration-500">
                   <div>
@@ -52,7 +55,7 @@ export default function Carousel({ data }: {data: Project[]}) {
               </div>
             </button>
             {isOpen && (
-              <DialogBox
+              <DialogBoxEvents
                 name={isOpen.name}
                 coverImage={isOpen.coverImage}
                 description={isOpen.description}

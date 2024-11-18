@@ -8,7 +8,7 @@ const imgLoader = (src: string) => {
   return src
 }
 
-export default function DialogBox({
+export default function DialogBoxProjects({
   name,
   description,
   coverImage,

@@ -33,7 +33,7 @@ export default function Header() {
         <ParticlesCom />
       </div>
       {/* Header section */}
-      <div className="mt-12 md:mt-16 pl-10 md:pl-16 flex justify-between w-full">
+      <div className="mt-12 md:mt-16 pl-10 md:pl-16 flex justify-between z-50 w-full">
         {/* Navbar Logo */}
         <Image
           src={"/textLogo.svg"}
@@ -119,7 +119,7 @@ export default function Header() {
       <div
         className={`${
           isMenuOpen ? "flex" : "hidden"
-        } fixed top-0 w-screen h-full px-10 justify-center items-center z-10 bg-black/20 backdrop-blur-sm md:hidden`}
+        } fixed top-0 w-screen h-full px-10 justify-center items-center z-[200] bg-black/20 backdrop-blur-sm md:hidden`}
         onClick={() => setMenuValue(false)}
       >
         <div
