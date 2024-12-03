@@ -1,12 +1,10 @@
 "use client";
-import {  Project } from "@/constants/types";
+import { Project } from "@/constants/types";
 import DialogBox from "./DialogBox-projects";
 import { useEffect, useState } from "react";
 import DialogBoxEvents from "./DialogBox";
 
-
-
-export default function Carousel({ data }: {data: Project[]}) {
+export default function Carousel({ data }: { data: Project[] }) {
   const [isOpen, open] = useState<Project | null>(null);
   const [isPhone, setIsPhone] = useState<boolean>(false);
 
@@ -35,13 +33,22 @@ export default function Carousel({ data }: {data: Project[]}) {
                 style={
                   isPhone
                     ? {
-                      backgroundImage: `url(${project.coverImage})`,
-                      width: `350px`,
-                      height: `${project.dimensions.height / project.dimensions.width * 350}px`,
-                    } : { backgroundImage: `url(${project.coverImage})`,
-                    height:`500px`,
-                    width:`${500*(project.dimensions.width/project.dimensions.height)}px`,
-                  }
+                        backgroundImage: `url(${project.coverImage})`,
+                        width: `350px`,
+                        height: `${
+                          (project.dimensions.height /
+                            project.dimensions.width) *
+                          350
+                        }px`,
+                      }
+                    : {
+                        backgroundImage: `url(${project.coverImage})`,
+                        height: `500px`,
+                        width: `${
+                          500 *
+                          (project.dimensions.width / project.dimensions.height)
+                        }px`,
+                      }
                 }
 
 
@@ -49,27 +56,32 @@ export default function Carousel({ data }: {data: Project[]}) {
                 <div className="bg-black opacity-0 hover:opacity-70 w-full h-full flex items-center justify-center rounded-lg duration-500">
                   <div>
                     <h2 className="text-white text-xl">{project.name}</h2>
-                    <p className="text-white text-sm pe-0 ps-0">{project.shortkey}</p>
+                    <p className="text-white text-sm pe-0 ps-0">
+                      {project.shortkey}
+                    </p>
                   </div>
                 </div>
               </div>
             </button>
-            {isOpen && (
-              <DialogBoxEvents
-                name={isOpen.name}
-                coverImage={isOpen.coverImage}
-                description={isOpen.description}
-                abstract={isOpen.abstract}
-                gallery={isOpen.gallery}
-                setOpen={open}
-                dimensions={isOpen.dimensions}
-                shortkey={isOpen.shortkey}
-                isOpen={isOpen !== null}
-              />
-            )}
+
+
+
           </div>
         );
       })}
+      {isOpen && (
+        <DialogBox
+          name={isOpen.name}
+          coverImage={isOpen.coverImage}
+          description={isOpen.description}
+          abstract={isOpen.abstract}
+          gallery={isOpen.gallery}
+          setOpen={open}
+          dimensions={isOpen.dimensions}
+          shortkey={isOpen.shortkey}
+          isOpen={isOpen !== null}
+        />
+      )}
     </div>
   );
 }
