@@ -63,9 +63,6 @@ export default function Carousel({ data }: { data: Project[] }) {
                 </div>
               </div>
             </button>
-
-
-
           </div>
         );
       })}
