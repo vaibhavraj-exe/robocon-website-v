@@ -1,0 +1,64 @@
+[
+    {
+      "src": "/CarouselImage/dean 2.jpg",
+      "title": "ABU Robocon Game Plan",
+      "category": "Team Presentation",
+      "content": " On 12th August, 2024 SRM Team Robocon had the privilege of presenting Dr. T.V. Gopal with our official DD Robocon competition video. The video highlighted the advanced capabilities of our robots, including precision in movement, coordination between systems, and seamless execution of tasks under competitive constraints. It provided an in-depth perspective on our strategic approach, innovative design principles, and robust engineering solutions developed to meet the competition's demanding requirements. Dr. T.V. Gopal commended the team’s exceptional technical expertise, innovative problem-solving, and unwavering dedication, reinforcing our commitment to pushing boundaries in robotics and representing excellence on an international stage."
+      
+    },
+    {
+      "src": "/CarouselImage/team with tools.jpg",
+      "title": "Lab Upgrades",
+      "category": "Sponsorship",
+      "content": "We are delighted to announce a significant enhancement to our workshop, made possible through the generosity of our sponsors, who contributed ₹60,000 to bolster SRM Team ROBOCON’s technical resources. This sponsorship empowers our team, particularly in the Mechanical and Electronics domains, by enabling us to push boundaries in design, assembly, and innovation."
+    },
+    {
+      "src": "/CarouselImage/orientation crowd (1).jpg",
+      "title": "Recruitment Orientation",
+      "category": "Orientation",
+      "content": "The first impression is a lasting impression, so we held an orientation session designed to welcome aspiring members and introduce them to our club’s objectives and activities. It was held on 31st August 2024 in the Prof. G.N. Ramachandran Hall at the Bioengineering Block of SRM Institute of Science and Technology. There was a crowd of 250-300 students who attended the Orientation and to engage them, we had organized Quizzes whose winners were given rewards. At the end of the session the attendees were provided refreshments and could approach the team to ask questions to clarify their questions and obtain more information."
+    },
+    {
+      "src": "/CarouselImage/health team.png",
+      "title": "Healthathon Participation",
+      "category": "Hackathon",
+      "content": "The Healthathon hackathon, organized by the Department of Biomedical Engineering on September 19, 2024, offered a dynamic platform for aspiring innovators to showcase their talents in healthcare technology. Designed with three rounds, each featuring unique problem statements, the event allowed participants to bring their concepts to life in a step-by-step format.The event began with the Ideathon, where teams brainstormed and presented their original ideas. In the second round, Pitching the Prototype, teams outlined detailed plans for their prototypes. Finally, in the Prototype Showdown, participants demonstrated polished versions of their prototypes, highlighting functionality, feasibility, and potential impact."
+    },
+    {
+      "src": "/CarouselImage/test 2.jpg",
+      "title": "Recruitment Test 2024",
+      "category": "Selection Process",
+      "content": "A rigorous recruitment test evaluated candidates for mechanical, electronics, corporate, and coding domains."
+    },
+    {
+      "src": "/CarouselImage/vfx trainign.jpg",
+      "title": "New Recruit Training",
+      "category": "Training",
+      "content": "Comprehensive training for recruits spans a month, covering mechanical, electronics, and progSRM Team Robocon provides comprehensive training for new recruits who successfully clear the selection tests and interviews. The training spans a  month and is conducted by the core team members. It includes hands-on sessions to familiarize recruits with various technologies used in past competitions, as well as workshops in mechanical, electronics, and programming domains. This rigorous training ensures that new members are well-prepared to contribute to the team's innovative projects."
+    },
+    {
+      "src": "/CarouselImage/group photo.png",
+      "title": "Altium Sponsorship Upgrade",
+      "category": "Event",
+      "content": " On September 4, 2024, SRM Team Robocon hosted Rea Callendar, Vice-President of Altium Education, who visited from California to engage with our team and promote Altium Education in India. We also coordinated with Madesh Perumal and Vikram Poojary, organizing a campus shoot and interviews with other SRMIST teams using Altium Designer. During his visit, Rea Callendar met with Dr. G. Joselin Retna Kumar and toured our Robocon Lab. We upgraded our sponsorship with Altium Education to Professional, and they generously gifted us team goodies. Altium Education is now sponsoring SRM Team Robocon for the ABU Robocon 2025 problem statement."
+    },
+    {
+      "src": "/CarouselImage/trackm.jpg",
+      "title": "TrackEM Detector",
+      "category": "SIH",
+      "content": " The team developed a railway track crack detector to prevent accidents caused by track defects. They created a cart model that travels over the tracks, equipped with sensors to detect cracks. When a crack is identified, the system sends a ray, which is reflected back at a different frequency, alerting the device. This ray system's advantage is its ability to detect cracks early, preventing future mishaps. This innovative solution enhances railway safety by addressing potential issues before they escalate."
+    },
+    {
+      "src": "/CarouselImage/spiderbot cad.jpg",
+      "title": "Spider Bot",
+      "category": "SIH",
+      "content": "The team developed the Spider Bot, equipped with six legs and a thermal camera, designed for search and rescue missions. This bot can detect people under debris during rescue operations and alert officials to their location. The judges were highly impressed by the innovative applications of the Spider Bot and strongly encouraged the team to consider patenting it."
+    },
+    {
+      "src": "/CarouselImage/droneye.jpg",
+      "title": "DRONEYE",
+      "category": "SIH",
+      "content": " processes drone footage to track unauthorized constructions using GPS and a database."
+    }
+  ]
+  
