@@ -250,11 +250,25 @@ export default function GalleryPage() {
         <h2 className="max-w-7xl pl-4 mx-auto text-xl z-50 md:text-5xl font-bold text-neutral-800 dark:text-neutral-200 font-sans">
           Our Gallery
         </h2>
-        <Carousel items={jsonData}
-          // items={data.map((card, index) => (
-          //   <Card key={index} card={card} index={index} />
-          // ))}
-        />
+        <Carousel
+  items={jsonData.map((item, index) => (
+    <div key={index} className="relative w-full h-64 md:h-96">
+      <Image
+        src={item.src}
+        alt={item.title}
+        layout="fill"
+        objectFit="cover"
+        className="rounded-lg"
+      />
+      <div className="absolute bottom-0 left-0 w-full p-4 bg-black bg-opacity-50 text-white">
+        <h3 className="text-lg font-semibold">{item.title}</h3>
+        <p className="text-sm">{item.category}</p>
+        <p className="text-xs">{item.content}</p>
+      </div>
+    </div>
+  ))}
+/>
+
       </div>
       <div className={`h-[2000px] py-0 w-full `}>
         <LayoutGrid cards={cards.slice(0, 12)} />
