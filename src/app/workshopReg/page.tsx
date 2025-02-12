@@ -120,7 +120,7 @@ export default function App() {
             height={340}
             alt=""
             />
-            <p className="text-center text-red text-wrap p-4 rounded-lg bg-white">please mention your srm email 4 digit in <br></br>the payment note</p>
+            <p className="text-center text-red text-wrap p-4 rounded-lg bg-white">Please mention your srm email domain in <br></br>the payment note as follows:<br></br>ab1234@srmist.edu.in<br></br>Enter: ab1234</p>
         </div>
         <div className="">
           <div className=" justify-center">
