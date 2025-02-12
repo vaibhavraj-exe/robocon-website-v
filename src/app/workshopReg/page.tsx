@@ -112,13 +112,16 @@ export default function App() {
         <span className="text-lg text-red font-extrabold mt-5"></span>
       </h3>
       <div className=" flex p-10 gap-10 justify-center items-center flex-wrap">
-        {/* <Image
-          className=" rounded-lg"
-          src="/events/payQR.jpg"
-          width={340}
-          height={340}
-          alt=""
-        /> */}
+        <div className="grid place-items-center gap-2">
+          <Image
+            className=" rounded-lg"
+            src="/events/payQR.jpg"
+            width={340}
+            height={340}
+            alt=""
+            />
+            <p className="text-center text-red text-wrap p-4 rounded-lg bg-white">please mention your srm email 4 digit in <br></br>the payment note</p>
+        </div>
         <div className="">
           <div className=" justify-center">
             <form className="max-w-md mx-auto" onSubmit={(e) => Submit(e)}>
