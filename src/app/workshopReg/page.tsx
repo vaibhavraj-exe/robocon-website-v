@@ -263,6 +263,7 @@ export default function App() {
                     <option value="M Block">M Block</option>
                     <option value="Meenakshi">Meenakshi</option>
                     <option value="Began">Began</option>
+                    <option value="NRI">NRI</option>
                   </select>
                 </div>
                 
