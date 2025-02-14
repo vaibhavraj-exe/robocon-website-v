@@ -301,7 +301,7 @@ export default function App() {
                     <option disabled value="default">
                       select any one
                     </option>
-                    <option value="Altium">Altium</option>
+                    {/* <option value="Altium">Altium</option> */}
                     <option value="Solidworks">Solidworks</option>
                   </select>
                 </div>
