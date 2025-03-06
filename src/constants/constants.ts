@@ -223,7 +223,7 @@ export const achievements1: Achievement[] = [
     "abstract": 'SRM Team Robocon was awarded the prestigious Fusion 360 Best User Experience Award in 2023, along with a cash prize of Rs 10,000. This accolade highlights our teams exceptional skills in utilizing Autodesk Fusion 360 to create designs that prioritize user experience, efficiency, and innovation. The Fusion 360 Best User Experience Award is part of the Autodesk Excellence Awards, which celebrate exceptional contributions in fields like architecture, engineering, product design, and manufacturing. This specific award recognizes projects that demonstrate outstanding user experience design using Autodesk Fusion 360 software.',
     "gallery": ["/achievements/Fusion360/fusion1.jpeg", "/achievements/Fusion360/fusion2.jpeg", "/achievements/Fusion360/fusion4.jpeg", "/achievements/Fusion360/fusion5.jpeg", "/achievements/Fusion360/fusion6.jpeg", "/achievements/Fusion360/fusion7.jpeg","/achievements/Fusion360/fusion8.jpg"],
     dimensions1: {
-      'height': 256, 'width': 256
+      'height':256,'width':256
     }
 
 
@@ -235,7 +235,7 @@ export const achievements1: Achievement[] = [
     "abstract": 'The internal SIH (Smart India Hackathon) 2023, three teams from SRM Team Robocon qualified for the competition. Each team was led by our dedicated club members, showcasing their innovative spirit and technical expertise. The Smart India Hackathon (SIH) at SRM Institute of Science and Technology (SRMIST) is a dynamic platform that engages students in solving real-world problems through innovative solution This accomplishment highlights our commitment to solving real-world problems through creativity and collaboration.',
     "gallery": [],
     dimensions1: {
-      'height': 309, 'width': 299
+      'height': 309, 'width': 226
     }
 
 
