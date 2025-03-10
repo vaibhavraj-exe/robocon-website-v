@@ -37,7 +37,7 @@ export default function Home() {
               data-aos="slide-right"
             >
               <Image
-                src={"/logo_gif.gif"}
+                src={"/LOGO.png"}
                 alt="logo"
                 width={400}
                 height={400}
