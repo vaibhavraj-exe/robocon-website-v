@@ -13,21 +13,21 @@ export default function Dashboard() {
 
   const pathLinks =
     path === "/dashboard" ? ["Home"] : path === "/home" ? ["Dashboard"] : ["Home", "Dashboard"];
+    
 
   const buttonOptions = [
-    ...(isLeader ? ["Permit Lab"] : []),
+    ...(isLeader ? ["Permit Lab","Make Lab Admin","Make Main Admin",
+    "Approve User",
+    "Remove User"] : []),
     "Add Lab",
     "All Users",
-    "Make Lab Admin",
-    "Make Main Admin",
-    "Approve User",
-    "Remove User",
     "Log Out",
   ];
 
   const pagelink = (text) => {
     if (text === "Dashboard") return "/dashboard";
     if (text === "Home") return "/home";
+    if(text==="All Users") return "/allusers"
     return `/special?page=${text.toLowerCase().replace(/\s+/g, "-")}`;
   };
 

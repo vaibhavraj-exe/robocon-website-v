@@ -19,19 +19,19 @@ const formDetails = {
   },
   "make-lab-admin": {
     title: "Lab Admin Login",
-    fields: ["Email", "Password", "Admin Code"],
+    fields: ["Phone Number(WhatsApp)"],
   },
   "make-main-admin": {
     title: "Main Admin Login",
-    fields: ["Email", "Password", "Verification Code"],
+    fields: ["Phone Number(WhatsApp)"],
   },
   "approve-user": {
-    title: "Approve User Login",
-    fields: ["Email", "Password", "User ID"],
+    title: "Add RFID",
+    fields: ["Phone Number(WhatsApp)","RFID"],
   },
   "remove-user": {
     title: "Remove User Login",
-    fields: ["Email", "Password", "User ID"],
+    fields: ["Phone Number(WhatsApp)"],
   },
   "log-out": {
     title: "Logout",
@@ -44,14 +44,14 @@ export default function Specialpage() {
   const page = searchParams.get("page") || "Welcome";
 
   const currentForm = formDetails[page] || {
-    title: "Unknown Action",
+    title: "",
     fields: ["Email", "Password"],
   };
 
   return (
     <div className="w-full max-w-lg mx-auto p-6 bg-gray-900 text-white rounded-xl shadow-lg mt-10">
       <h1 className="text-2xl font-bold capitalize mb-4">{currentForm.title}</h1>
-      <p className="text-gray-300 mb-6">Please log in to continue.</p>
+      
 
       {currentForm.fields.length > 0 ? (
         <form className="space-y-4">
@@ -69,7 +69,7 @@ export default function Specialpage() {
                   >
                    
                     {currentForm.options?.map((lab, labIndex) => (
-                      <option key={labIndex} value={lab.toLowerCase().replace(/\s+/g, "-")}>
+                      <option key={labIndex} value={lab.toLowerCase()}>
                         {lab}
                       </option>
                     ))}
