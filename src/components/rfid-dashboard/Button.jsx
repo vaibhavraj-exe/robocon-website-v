@@ -56,7 +56,7 @@ export default function Dashboard() {
 
   return (
     <div
-      className={`w-full bg-gradient-to-r from-black to-gray-600 text-white py-8 px-4 shadow-md flex flex-col items-center justify-center relative ${
+      className={`w-full  text-white py-8 px-4 shadow-md flex flex-col items-center justify-center relative ${
         menuOpen ? "overflow-hidden" : "overflow-x-hidden"
       }`}
     >
