@@ -16,7 +16,7 @@ export default function Dashboard() {
   return (
     <div className="min-h-screen bg-gray-100">
       {/* Header Section */}
-      <div className="bg-gradient-to-r from-indigo-500 to-blue-500 text-white text-center py-8 rounded-b-3xl shadow-lg">
+      <div className="bg-gradient-to-r from-black to-gray-600 text-white text-center py-8 rounded-b-3xl shadow-lg">
         <h1 className="text-2xl font-bold">{user_name}</h1>
         <p className="text-sm mt-1">{reg_num}</p>
 

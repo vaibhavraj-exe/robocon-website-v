@@ -49,7 +49,11 @@ export default function Specialpage() {
   };
 
   return (
+    
     <div className="w-full max-w-lg mx-auto p-6 bg-gray-900 text-white rounded-xl shadow-lg mt-10">
+      <div className="mb-6">
+        <Button />
+      </div>
       <h1 className="text-2xl font-bold capitalize mb-4">{currentForm.title}</h1>
       
 
@@ -102,9 +106,7 @@ export default function Specialpage() {
         <p className="text-green-400">You have been logged out successfully.</p>
       )}
 
-      <div className="mt-6">
-        <Button />
-      </div>
+      
     </div>
   );
 }
