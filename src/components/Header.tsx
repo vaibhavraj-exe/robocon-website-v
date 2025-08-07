@@ -192,8 +192,8 @@ export default function Header() {
 
       {/* svg below navbar */}
       <div className="hidden md:flex justify-end mt-5" data-aos="fade-left">
-        <div className="nav-bar-clip h-10 bg-red w-64">
-          {/* EVENT alert section*/}
+        {/* EVENT alert section*/}
+        {/* <div className="nav-bar-clip h-10 bg-red w-64">          
           <div className="px-12 py-2 flex">
             <button className=" text-white font-semibold" onClick={() => router.push("/workshopReg") }>Event Alert!</button>
             <span className="relative flex h-3 w-3 ">
@@ -201,7 +201,7 @@ export default function Header() {
               <span className="relative inline-flex rounded-full h-3 w-3 bg-sky-400"></span>
             </span>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

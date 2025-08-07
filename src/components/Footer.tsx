@@ -53,7 +53,7 @@ export default function Footer(){
           </div>
           <div className="flex gap-2">
             <Image
-              src={"/logo_gif.gif"}
+              src={"/LOGO.png"}
               alt="logo"
               width={150}
               height={150}
