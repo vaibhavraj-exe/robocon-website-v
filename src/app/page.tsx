@@ -16,6 +16,7 @@ import Footer from "@/components/Footer";
 import ProjectsDisplay from "@/components/ProjectsDisplay";
 
 import RoboConEvent from "@/components/RoboConEvent";
+import RecruitmentSection from "@/components/RecruitmentSection";
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -137,6 +138,11 @@ export default function Home() {
       {/* <section className="relative max-md:mt-20">
         <RoboConEvent />
       </section> */}
+      
+      {/*Recruitment section*/}
+      <section className="relative max-md:mt-20">
+        <RecruitmentSection />
+      </section>
 
       {/* Third section */}
       <section className="w-full h-full">
