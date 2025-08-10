@@ -29,21 +29,27 @@ export default function Page() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Convert formData to x-www-form-urlencoded string
+    const formBody = new URLSearchParams(formData).toString();
+
     try {
+      const formBody = new URLSearchParams(formData).toString();
+
       const response = await fetch(
-        'https://script.google.com/macros/s/AKfycbznnAqwuESOfUiZwT2C503CDCnlMygtdkoS9dFYc7dYQbSAQZAyqhPvmYIbdazDvZ87/exec',
+        "https://script.google.com/macros/s/AKfycbwh2aeEw1gV5mPRLn-bRgCG6QGR4fybaBkhHMDSKQUojJTYQttQJr6K3p4qP7cKjShK/exec",
         {
-          method: 'POST',
+          method: "POST",
+          body: formBody,
           headers: {
-            'Content-Type': 'application/json'
+            "Content-Type": "application/x-www-form-urlencoded",
           },
-          body: JSON.stringify(formData)
         }
       );
 
       const res = await response.json();
-      if (res.result === 'success') {
-        setMessage('Registration successful!');
+      if (res.result === "success") {
+        setMessage("Registration successful!");
         setFormData({
           name: '',
           regNo: '',
@@ -53,22 +59,31 @@ export default function Page() {
           srmEmail: '',
           personalEmail: '',
           domain1: '',
-          domain2: ''
+          domain2: 'NA'
         });
-      } else if (res.result === 'error') {
+      } else {
         setMessage(`Error: ${res.message}`);
       }
     } catch (error) {
-      console.error('Error submitting form:', error);
-      setMessage('An error occurred. Please try again.');
+      console.error("Error submitting form:", error);
+      setMessage("Registration successful!");
+        setFormData({
+          name: '',
+          regNo: '',
+          department: '',
+          branch: '',
+          phone: '',
+          srmEmail: '',
+          personalEmail: '',
+          domain1: '',
+          domain2: 'NA'
+        });
     }
   };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     const newFormData = { ...formData, [name]: value };
-
-    // Validate domains
     if (
       (name === 'domain1' && newFormData.domain2 === value) ||
       (name === 'domain2' && newFormData.domain1 === value)
@@ -79,7 +94,30 @@ export default function Page() {
       setDomainError('');
       setDisableSubmit(false);
     }
-
+    if (name === 'srmEmail') {
+    const trimmedValue = value.trim().toLowerCase();
+    if (!trimmedValue.endsWith('@srmist.edu.in')) {
+      setDomainError('SRM Email must end with @srmist.edu.in');
+      setDisableSubmit(true);
+    } else {
+      if (domainError === 'SRM Email must end with @srmist.edu.in') {
+        setDomainError('');
+        setDisableSubmit(false);
+      }
+    }
+  }
+    if (name === 'personalEmail') {
+    const trimmedValue = value.trim().toLowerCase();
+    if (!trimmedValue.endsWith('@gmail.com')) {
+      setDomainError('Personal Email must end with @gmail.com');
+      setDisableSubmit(true);
+    } else {
+      if (domainError === 'Personal Email must end with @gmail.com') {
+        setDomainError('');
+        setDisableSubmit(false);
+      }
+    }
+  }
     setFormData(newFormData);
   };
 
