@@ -31,7 +31,7 @@ export default function Page() {
     e.preventDefault();
     try {
       const response = await fetch(
-        'https://script.google.com/macros/s/AKfycbyZRycwXqQscprdw-p-_ma_9qxRDbXqveAXAmi5k5DSOqmKUcZDGKVQKFXcNnMqsf5e/exec',
+        'https://script.google.com/macros/s/AKfycbznnAqwuESOfUiZwT2C503CDCnlMygtdkoS9dFYc7dYQbSAQZAyqhPvmYIbdazDvZ87/exec',
         {
           method: 'POST',
           headers: {
