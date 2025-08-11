@@ -31,7 +31,7 @@ export default function Page() {
     e.preventDefault();
 
     // Convert formData to x-www-form-urlencoded string
-    const formBody = new URLSearchParams(formData).toString();
+    // const formBody = new URLSearchParams(formData).toString();
 
     try {
       const formBody = new URLSearchParams(formData).toString();
@@ -40,6 +40,7 @@ export default function Page() {
         "https://script.google.com/macros/s/AKfycbwh2aeEw1gV5mPRLn-bRgCG6QGR4fybaBkhHMDSKQUojJTYQttQJr6K3p4qP7cKjShK/exec",
         {
           method: "POST",
+          mode: "no-cors",
           body: formBody,
           headers: {
             "Content-Type": "application/x-www-form-urlencoded",
@@ -65,8 +66,9 @@ export default function Page() {
         setMessage(`Error: ${res.message}`);
       }
     } catch (error) {
-      console.error("Error submitting form:", error);
-      setMessage("Registration successful!");
+      console.log("Error submitting form:", error);
+      if (error.message == 'Unexpected end of input') {
+        setMessage(`Registration successful!\n Confirmation mail sent to your SRM Mail ID.\n || IF YOU DO NOT RECEIVE EMAIL,   🗨️Contact : 7376334488`);
         setFormData({
           name: '',
           regNo: '',
@@ -78,6 +80,10 @@ export default function Page() {
           domain1: '',
           domain2: 'NA'
         });
+      }
+      else {
+        setMessage(`${error.message} || IF YOU DO NOT RECEIVE CONFIRMATION EMAIL, 📞Contact : 7376334488`);
+      }
     }
   };
 
@@ -95,29 +101,25 @@ export default function Page() {
       setDisableSubmit(false);
     }
     if (name === 'srmEmail') {
-    const trimmedValue = value.trim().toLowerCase();
-    if (!trimmedValue.endsWith('@srmist.edu.in')) {
-      setDomainError('SRM Email must end with @srmist.edu.in');
-      setDisableSubmit(true);
-    } else {
-      if (domainError === 'SRM Email must end with @srmist.edu.in') {
+      const trimmedValue = value.trim().toLowerCase();
+      if (!trimmedValue.endsWith('@srmist.edu.in')) {
+        setDomainError('SRM Email must end with @srmist.edu.in');
+        setDisableSubmit(true);
+      } else {
         setDomainError('');
         setDisableSubmit(false);
       }
     }
-  }
     if (name === 'personalEmail') {
-    const trimmedValue = value.trim().toLowerCase();
-    if (!trimmedValue.endsWith('@gmail.com')) {
-      setDomainError('Personal Email must end with @gmail.com');
-      setDisableSubmit(true);
-    } else {
-      if (domainError === 'Personal Email must end with @gmail.com') {
+      const trimmedValue = value.trim().toLowerCase();
+      if (!trimmedValue.endsWith('@gmail.com')) {
+        setDomainError('Personal Email must end with @gmail.com');
+        setDisableSubmit(true);
+      } else {
         setDomainError('');
         setDisableSubmit(false);
       }
     }
-  }
     setFormData(newFormData);
   };
 
